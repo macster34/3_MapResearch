@@ -1,0 +1,93 @@
+{
+  "Neighborhood_50": {
+    "total_calls": 570,
+    "monthly_breakdown": {
+      "July": 227,
+      "June": 203,
+      "August": 140
+    },
+    "category_breakdown": {
+      "Storm Debris": 162,
+      "Maintenance": 125,
+      "Flood & Drainage": 73,
+      "Power Outage": 66,
+      "Nuisance & Code": 62,
+      "Traffic & Infrastructure": 50,
+      "Other": 32
+    },
+    "subcategory_breakdown": {
+      "Storm Debris Collection": 110,
+      "Routine Infrastructure Issues": 68,
+      "Missed Pickup Services": 60,
+      "General Power Outages": 58,
+      "Other Storm Debris": 39,
+      "Miscellaneous": 32,
+      "Container Issues": 28,
+      "Property Nuisance": 26,
+      "Health & Building Code": 25,
+      "Recycling Services": 18,
+      "Street Hazards": 16,
+      "SWM Escalation": 14,
+      "Parking Violations": 13,
+      "Other Nuisance": 8,
+      "Traffic Signs": 8,
+      "Traffic Signal Power Issues": 8,
+      "Storm-Related Tree Removal": 8,
+      "Potholes": 7,
+      "Storm-Related Tree Trimming": 5,
+      "Street Conditions": 5,
+      "Other Maintenance": 5,
+      "Illegal Dumping & Waste": 3,
+      "Storm-Caused Flood & Drainage": 3,
+      "Water Infrastructure": 2,
+      "Infrastructure Maintenance": 1
+    }
+  },
+  "Neighborhood_3": {
+    "total_calls": 2222,
+    "monthly_breakdown": {
+      "July": 1181,
+      "August": 581,
+      "June": 460
+    },
+    "category_breakdown": {
+      "Storm Debris": 985,
+      "Flood & Drainage": 331,
+      "Maintenance": 316,
+      "Traffic & Infrastructure": 219,
+      "Power Outage": 184,
+      "Other": 105,
+      "Nuisance & Code": 82
+    },
+    "subcategory_breakdown": {
+      "Storm Debris Collection": 773,
+      "Routine Infrastructure Issues": 316,
+      "General Power Outages": 161,
+      "Other Storm Debris": 156,
+      "Missed Pickup Services": 156,
+      "Miscellaneous": 105,
+      "Container Issues": 66,
+      "Street Hazards": 64,
+      "Recycling Services": 54,
+      "Street Conditions": 44,
+      "Traffic Signs": 39,
+      "Infrastructure Maintenance": 39,
+      "Storm-Related Tree Removal": 34,
+      "Property Nuisance": 33,
+      "Health & Building Code": 32,
+      "SWM Escalation": 28,
+      "Storm-Related Tree Trimming": 22,
+      "Parking Violations": 19,
+      "Potholes": 14,
+      "Other Maintenance": 12,
+      "Other Nuisance": 12,
+      "Traffic Signal Power Issues": 12,
+      "Water Infrastructure": 11,
+      "Tree/Branch on Power Lines": 10,
+      "Illegal Dumping & Waste": 4,
+      "Storm-Caused Flood & Drainage": 4,
+      "Graffiti & Vandalism": 1,
+      "Street Light Power Issues": 1
+    }
+  }
+}
