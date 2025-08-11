@@ -1,0 +1,6933 @@
+{
+  "calculation_date": "2025-08-11T01:04:14.705Z",
+  "date_range": {
+    "start": "2024-07-08",
+    "end": "2024-07-31"
+  },
+  "total_311_calls_in_period": 48611,
+  "markers_analyzed": 6,
+  "assignment_method": "closest_marker_when_overlap",
+  "results": [
+    {
+      "marker_name": "Christ Memorial Lutheran Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.59428303999998,
+        29.770484579999998
+      ],
+      "total_calls": 293,
+      "call_breakdown": {
+        "Storm Debris": 209,
+        "Traffic & Infrastructure": 22,
+        "Flood & Drainage": 31,
+        "Other": 2,
+        "Maintenance": 12,
+        "Power Outage": 16,
+        "Nuisance & Code": 1
+      },
+      "calls_within_1mile": 293,
+      "assigned_calls": [
+        {
+          "category": "Storm Debris",
+          "distance": 0.08598436794001281,
+          "coordinates": [
+            -95.5932,
+            29.7713
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.734770635266218,
+          "coordinates": [
+            -95.5846,
+            29.777
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9575928281739234,
+          "coordinates": [
+            -95.6021,
+            29.7584
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2492819848462159,
+          "coordinates": [
+            -95.5975,
+            29.7682
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.734770635266218,
+          "coordinates": [
+            -95.5846,
+            29.777
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5678197728179242,
+          "coordinates": [
+            -95.585,
+            29.7721
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7673697011493176,
+          "coordinates": [
+            -95.589,
+            29.7806
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7993680374867037,
+          "coordinates": [
+            -95.5817,
+            29.7743
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.685007631857552,
+          "coordinates": [
+            -95.5906,
+            29.7611
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.42765084182644264,
+          "coordinates": [
+            -95.594,
+            29.7643
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.44355693124971607,
+          "coordinates": [
+            -95.5923,
+            29.7643
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9340852240406957,
+          "coordinates": [
+            -95.5982,
+            29.7574
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2360316950411279,
+          "coordinates": [
+            -95.5915,
+            29.7729
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.40783160620953407,
+          "coordinates": [
+            -95.59,
+            29.7659
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8139010842482706,
+          "coordinates": [
+            -95.5884,
+            29.7811
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5649093348120342,
+          "coordinates": [
+            -95.585,
+            29.7691
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.18991339969580467,
+          "coordinates": [
+            -95.5974,
+            29.77
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5643570649068047,
+          "coordinates": [
+            -95.5923,
+            29.7625
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7415788976771666,
+          "coordinates": [
+            -95.5826,
+            29.774
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6653809151779037,
+          "coordinates": [
+            -95.584,
+            29.7741
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6739928252917295,
+          "coordinates": [
+            -95.5838,
+            29.774
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8943968938557227,
+          "coordinates": [
+            -95.5877,
+            29.7821
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.734770635266218,
+          "coordinates": [
+            -95.5846,
+            29.777
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4545759046320916,
+          "coordinates": [
+            -95.5914,
+            29.7644
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8358599699557276,
+          "coordinates": [
+            -95.5814,
+            29.7751
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.47120651763225474,
+          "coordinates": [
+            -95.594,
+            29.7773
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4644143675529054,
+          "coordinates": [
+            -95.5904,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7101293896115781,
+          "coordinates": [
+            -95.5846,
+            29.7764
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8250754715995356,
+          "coordinates": [
+            -95.5994,
+            29.7594
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5610094912164141,
+          "coordinates": [
+            -95.588,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5502463593864138,
+          "coordinates": [
+            -95.5904,
+            29.7777
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9531423641895626,
+          "coordinates": [
+            -95.5949,
+            29.7567
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6054233775890906,
+          "coordinates": [
+            -95.5911,
+            29.7788
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3870926373490759,
+          "coordinates": [
+            -95.5956,
+            29.765
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.3927844329460877,
+          "coordinates": [
+            -95.5892,
+            29.7669
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.18970060558606217,
+          "coordinates": [
+            -95.5917,
+            29.7689
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.42940481643287476,
+          "coordinates": [
+            -95.5984,
+            29.7654
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9195612432193492,
+          "coordinates": [
+            -95.5864,
+            29.7819
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8360735549519163,
+          "coordinates": [
+            -95.59,
+            29.782
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5796705174887501,
+          "coordinates": [
+            -95.593,
+            29.7788
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5028838660439477,
+          "coordinates": [
+            -95.5976,
+            29.7638
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4344912968263349,
+          "coordinates": [
+            -95.5882,
+            29.7739
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8606404024833606,
+          "coordinates": [
+            -95.5891,
+            29.7821
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5746456605424856,
+          "coordinates": [
+            -95.5941,
+            29.7788
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8477271239956629,
+          "coordinates": [
+            -95.587,
+            29.781
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.8848776756867803,
+          "coordinates": [
+            -95.5895,
+            29.7826
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.3927844329460877,
+          "coordinates": [
+            -95.5892,
+            29.7669
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.29501475040495256,
+          "coordinates": [
+            -95.5894,
+            29.771
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8705049393273939,
+          "coordinates": [
+            -95.6005,
+            29.7591
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8118769388836558,
+          "coordinates": [
+            -95.5878,
+            29.7808
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7673697011493176,
+          "coordinates": [
+            -95.589,
+            29.7806
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8597583111723374,
+          "coordinates": [
+            -95.5874,
+            29.7814
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7323681784711001,
+          "coordinates": [
+            -95.5894,
+            29.7802
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7147615659324301,
+          "coordinates": [
+            -95.5891,
+            29.7798
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.761716687592907,
+          "coordinates": [
+            -95.5885,
+            29.7803
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7733660563748922,
+          "coordinates": [
+            -95.5883,
+            29.7804
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7790034291927361,
+          "coordinates": [
+            -95.5881,
+            29.7804
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7908223531392626,
+          "coordinates": [
+            -95.5879,
+            29.7805
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.766882232674365,
+          "coordinates": [
+            -95.5877,
+            29.78
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7885536174733991,
+          "coordinates": [
+            -95.5872,
+            29.7801
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.855266261169255,
+          "coordinates": [
+            -95.5864,
+            29.7808
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.734770635266218,
+          "coordinates": [
+            -95.5846,
+            29.777
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6262705656765633,
+          "coordinates": [
+            -95.5851,
+            29.7748
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4169974371626605,
+          "coordinates": [
+            -95.5923,
+            29.7647
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9225294726765081,
+          "coordinates": [
+            -95.5907,
+            29.7575
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9076974700746404,
+          "coordinates": [
+            -95.5908,
+            29.7577
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.28088650787472547,
+          "coordinates": [
+            -95.5978,
+            29.7678
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.685007631857552,
+          "coordinates": [
+            -95.5906,
+            29.7611
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.1736360890834174,
+          "coordinates": [
+            -95.5959,
+            29.7684
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7067363438866795,
+          "coordinates": [
+            -95.5856,
+            29.7774
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5360738035351907,
+          "coordinates": [
+            -95.5865,
+            29.7743
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.462475097241521,
+          "coordinates": [
+            -95.5867,
+            29.7717
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.7015726098883079,
+          "coordinates": [
+            -95.5902,
+            29.78
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.08492052364520505,
+          "coordinates": [
+            -95.5933,
+            29.7696
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.39058753454469247,
+          "coordinates": [
+            -95.5923,
+            29.7651
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.4973505238653746,
+          "coordinates": [
+            -95.5901,
+            29.7767
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5887483305231033,
+          "coordinates": [
+            -95.5868,
+            29.776
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3270807508941505,
+          "coordinates": [
+            -95.5892,
+            29.7722
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5457904480192088,
+          "coordinates": [
+            -95.5901,
+            29.7775
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.4913969738917569,
+          "coordinates": [
+            -95.5901,
+            29.7766
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4481018204784693,
+          "coordinates": [
+            -95.5871,
+            29.7687
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6025800014143252,
+          "coordinates": [
+            -95.6029,
+            29.766
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5929202655683061,
+          "coordinates": [
+            -95.5902,
+            29.7783
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.462475097241521,
+          "coordinates": [
+            -95.5867,
+            29.7717
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.2955432141698661,
+          "coordinates": [
+            -95.59,
+            29.7726
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5670004583106336,
+          "coordinates": [
+            -95.5976,
+            29.7628
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.18970060558606217,
+          "coordinates": [
+            -95.5917,
+            29.7689
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2929166166423856,
+          "coordinates": [
+            -95.5894,
+            29.7704
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6889768097909076,
+          "coordinates": [
+            -95.6038,
+            29.7649
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8423667100789262,
+          "coordinates": [
+            -95.5878,
+            29.7813
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5022946711683901,
+          "coordinates": [
+            -95.5917,
+            29.7774
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.28728400610094745,
+          "coordinates": [
+            -95.5936,
+            29.7746
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.623844515604021,
+          "coordinates": [
+            -95.6014,
+            29.7639
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8401338152370117,
+          "coordinates": [
+            -95.5995,
+            29.7592
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4973505238653746,
+          "coordinates": [
+            -95.5901,
+            29.7767
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.49460706260281445,
+          "coordinates": [
+            -95.5904,
+            29.7768
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5936379681927504,
+          "coordinates": [
+            -95.5897,
+            29.7781
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4945395005872174,
+          "coordinates": [
+            -95.5862,
+            29.7719
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4913969738917569,
+          "coordinates": [
+            -95.5901,
+            29.7766
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.2851796752843061,
+          "coordinates": [
+            -95.5902,
+            29.7726
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8332025757803928,
+          "coordinates": [
+            -95.5869,
+            29.7807
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5984829216267142,
+          "coordinates": [
+            -95.5905,
+            29.7785
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.18004907524747518,
+          "coordinates": [
+            -95.5939,
+            29.7679
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5362586198325403,
+          "coordinates": [
+            -95.5898,
+            29.7772
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7015726098883079,
+          "coordinates": [
+            -95.5902,
+            29.78
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.2955432141698661,
+          "coordinates": [
+            -95.59,
+            29.7726
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5929202655683061,
+          "coordinates": [
+            -95.5902,
+            29.7783
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5035072099408839,
+          "coordinates": [
+            -95.5899,
+            29.7767
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4595668785366722,
+          "coordinates": [
+            -95.59,
+            29.776
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4538540595132377,
+          "coordinates": [
+            -95.59,
+            29.7759
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.49435256842042047,
+          "coordinates": [
+            -95.5902,
+            29.7767
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.27337353110928236,
+          "coordinates": [
+            -95.5898,
+            29.7712
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6342444411867858,
+          "coordinates": [
+            -95.5958,
+            29.7614
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.41277921594352174,
+          "coordinates": [
+            -95.5964,
+            29.7648
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8270408258933898,
+          "coordinates": [
+            -95.5967,
+            29.7587
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.834101447485438,
+          "coordinates": [
+            -95.5973,
+            29.7587
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.815532661662106,
+          "coordinates": [
+            -95.5831,
+            29.7772
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.43650265078383504,
+          "coordinates": [
+            -95.5894,
+            29.7658
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.7603961935644428,
+          "coordinates": [
+            -95.599,
+            29.7807
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3082700079755512,
+          "coordinates": [
+            -95.5925,
+            29.7663
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9219273616171332,
+          "coordinates": [
+            -95.6008,
+            29.7584
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.11556781614617857,
+          "coordinates": [
+            -95.5949,
+            29.7689
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9207172517976729,
+          "coordinates": [
+            -95.5982,
+            29.7576
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3145232690556527,
+          "coordinates": [
+            -95.5986,
+            29.7679
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.15884742594437987,
+          "coordinates": [
+            -95.5954,
+            29.7684
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7625915392800781,
+          "coordinates": [
+            -95.5924,
+            29.7814
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4870789675462324,
+          "coordinates": [
+            -95.5866,
+            29.7682
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5067676216648507,
+          "coordinates": [
+            -95.6021,
+            29.7677
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8037931497915531,
+          "coordinates": [
+            -95.5888,
+            29.7811
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9260019866823527,
+          "coordinates": [
+            -95.6039,
+            29.76
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8742804483435337,
+          "coordinates": [
+            -95.6038,
+            29.7609
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6446754507164262,
+          "coordinates": [
+            -95.5926,
+            29.7797
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6446754507164262,
+          "coordinates": [
+            -95.5926,
+            29.7797
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5315181794569552,
+          "coordinates": [
+            -95.5864,
+            29.774
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4585172419702065,
+          "coordinates": [
+            -95.5906,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8780134686958164,
+          "coordinates": [
+            -95.6003,
+            29.7589
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2548382554355127,
+          "coordinates": [
+            -95.5903,
+            29.7692
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.2548382554355127,
+          "coordinates": [
+            -95.5903,
+            29.7692
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4913969738917569,
+          "coordinates": [
+            -95.5901,
+            29.7766
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5546838247764228,
+          "coordinates": [
+            -95.5855,
+            29.773
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5546838247764228,
+          "coordinates": [
+            -95.5855,
+            29.773
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6944981393028252,
+          "coordinates": [
+            -95.6035,
+            29.7644
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.15540941253982263,
+          "coordinates": [
+            -95.5949,
+            29.7683
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.4884646049208071,
+          "coordinates": [
+            -95.6021,
+            29.7685
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4884646049208071,
+          "coordinates": [
+            -95.6021,
+            29.7685
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6613979565158692,
+          "coordinates": [
+            -95.6039,
+            29.7658
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5621824306967299,
+          "coordinates": [
+            -95.6011,
+            29.7649
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.31775936317276093,
+          "coordinates": [
+            -95.5894,
+            29.7687
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.930705395433827,
+          "coordinates": [
+            -95.6031,
+            29.7594
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.930705395433827,
+          "coordinates": [
+            -95.6031,
+            29.7594
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4317539240985262,
+          "coordinates": [
+            -95.5871,
+            29.7709
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.24657689843072692,
+          "coordinates": [
+            -95.5903,
+            29.7696
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24657689843072692,
+          "coordinates": [
+            -95.5903,
+            29.7696
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.49399556424318647,
+          "coordinates": [
+            -95.5861,
+            29.7713
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.9167537846259083,
+          "coordinates": [
+            -95.6035,
+            29.7599
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.462475097241521,
+          "coordinates": [
+            -95.5867,
+            29.7717
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8116502875744213,
+          "coordinates": [
+            -95.5821,
+            29.7756
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7484195389963424,
+          "coordinates": [
+            -95.5918,
+            29.7811
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7484195389963424,
+          "coordinates": [
+            -95.5918,
+            29.7811
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.403023074032652,
+          "coordinates": [
+            -95.5892,
+            29.7743
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3332824167443887,
+          "coordinates": [
+            -95.5888,
+            29.7697
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3444718363896132,
+          "coordinates": [
+            -95.5888,
+            29.769
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5422516387610173,
+          "coordinates": [
+            -95.5858,
+            29.7732
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5655610872561437,
+          "coordinates": [
+            -95.5992,
+            29.7635
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3925699585786501,
+          "coordinates": [
+            -95.591,
+            29.7754
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5269224884638616,
+          "coordinates": [
+            -95.5952,
+            29.7629
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9167537846259083,
+          "coordinates": [
+            -95.6035,
+            29.7599
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4751506350978824,
+          "coordinates": [
+            -95.5865,
+            29.7692
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7074915012394754,
+          "coordinates": [
+            -95.6028,
+            29.7634
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.3927844329460877,
+          "coordinates": [
+            -95.5892,
+            29.7669
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.49460706260281445,
+          "coordinates": [
+            -95.5904,
+            29.7768
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5184283231948449,
+          "coordinates": [
+            -95.5898,
+            29.7769
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3297951995066017,
+          "coordinates": [
+            -95.5924,
+            29.766
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.777263804976434,
+          "coordinates": [
+            -95.5893,
+            29.7601
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.8843307405446871,
+          "coordinates": [
+            -95.5926,
+            29.7832
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6782697664545948,
+          "coordinates": [
+            -95.5941,
+            29.7803
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.12835256021447092,
+          "coordinates": [
+            -95.5954,
+            29.7689
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.4913969738917569,
+          "coordinates": [
+            -95.5901,
+            29.7766
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5966766022025713,
+          "coordinates": [
+            -95.5936,
+            29.7791
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.3927844329460877,
+          "coordinates": [
+            -95.5892,
+            29.7669
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.41766913252166965,
+          "coordinates": [
+            -95.6009,
+            29.7686
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5752889975139296,
+          "coordinates": [
+            -95.6015,
+            29.765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.10254035765834817,
+          "coordinates": [
+            -95.5958,
+            29.7698
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8868212723596053,
+          "coordinates": [
+            -95.5904,
+            29.7581
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6169278187605705,
+          "coordinates": [
+            -95.6024,
+            29.765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.549888522284889,
+          "coordinates": [
+            -95.5974,
+            29.763
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7305353577127359,
+          "coordinates": [
+            -95.5856,
+            29.7779
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.22394222599582075,
+          "coordinates": [
+            -95.5974,
+            29.7687
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6760052199142584,
+          "coordinates": [
+            -95.5922,
+            29.7801
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.3454093937534408,
+          "coordinates": [
+            -95.5895,
+            29.7677
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7722710465559663,
+          "coordinates": [
+            -95.5921,
+            29.7815
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.1350012750627213,
+          "coordinates": [
+            -95.5956,
+            29.7689
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.56015072092439,
+          "coordinates": [
+            -95.5918,
+            29.7783
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7388182627452098,
+          "coordinates": [
+            -95.582,
+            29.7713
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.725361592419564,
+          "coordinates": [
+            -95.5897,
+            29.7802
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.39116087579911313,
+          "coordinates": [
+            -95.5959,
+            29.765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9432257724170411,
+          "coordinates": [
+            -95.6033,
+            29.7593
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6636934235430777,
+          "coordinates": [
+            -95.602,
+            29.7636
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.07722074776374838,
+          "coordinates": [
+            -95.5952,
+            29.7697
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6134463013303864,
+          "coordinates": [
+            -95.5996,
+            29.7629
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.42773642833574366,
+          "coordinates": [
+            -95.5946,
+            29.7643
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.38940900659265654,
+          "coordinates": [
+            -95.5884,
+            29.7681
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5243709454630023,
+          "coordinates": [
+            -95.5971,
+            29.7633
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7383759049345116,
+          "coordinates": [
+            -95.6035,
+            29.7634
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.892942190691311,
+          "coordinates": [
+            -95.5891,
+            29.7826
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.435796910684002,
+          "coordinates": [
+            -95.5949,
+            29.7642
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4885740089610913,
+          "coordinates": [
+            -95.5988,
+            29.7646
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7527513975156317,
+          "coordinates": [
+            -95.591,
+            29.781
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.361513779495636,
+          "coordinates": [
+            -95.5938,
+            29.7757
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.901036472454926,
+          "coordinates": [
+            -95.6014,
+            29.759
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.909698768887864,
+          "coordinates": [
+            -95.6017,
+            29.759
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.06919255409385014,
+          "coordinates": [
+            -95.595,
+            29.7697
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4395558667513512,
+          "coordinates": [
+            -95.5934,
+            29.7768
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.4913969738917569,
+          "coordinates": [
+            -95.5901,
+            29.7766
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.4913969738917569,
+          "coordinates": [
+            -95.5901,
+            29.7766
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.36267207635340615,
+          "coordinates": [
+            -95.5936,
+            29.7757
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7422505813644563,
+          "coordinates": [
+            -95.582,
+            29.7718
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.22859898057990527,
+          "coordinates": [
+            -95.5968,
+            29.768
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.6342444411867858,
+          "coordinates": [
+            -95.5958,
+            29.7614
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.33074145007385997,
+          "coordinates": [
+            -95.59,
+            29.7735
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.515270171062087,
+          "coordinates": [
+            -95.5916,
+            29.7634
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4898668610050403,
+          "coordinates": [
+            -95.5946,
+            29.7634
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.48381564735740845,
+          "coordinates": [
+            -95.5905,
+            29.7643
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5402198939162342,
+          "coordinates": [
+            -95.6021,
+            29.7666
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.16997111029205417,
+          "coordinates": [
+            -95.5967,
+            29.7692
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5770665374386478,
+          "coordinates": [
+            -95.6024,
+            29.766
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.406716300697845,
+          "coordinates": [
+            -95.5977,
+            29.7654
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.30405123518585453,
+          "coordinates": [
+            -95.5983,
+            29.7678
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5293569560814304,
+          "coordinates": [
+            -95.6016,
+            29.7662
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.39795369043953405,
+          "coordinates": [
+            -95.5974,
+            29.7654
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5118032820325162,
+          "coordinates": [
+            -95.5988,
+            29.7642
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6342444411867858,
+          "coordinates": [
+            -95.5958,
+            29.7614
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.539342759207617,
+          "coordinates": [
+            -95.6018,
+            29.7662
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.33074145007385997,
+          "coordinates": [
+            -95.59,
+            29.7735
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.2548382554355127,
+          "coordinates": [
+            -95.5903,
+            29.7692
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.403187620584942,
+          "coordinates": [
+            -95.5994,
+            29.7667
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.16426648478663586,
+          "coordinates": [
+            -95.5956,
+            29.7684
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.20708919039742635,
+          "coordinates": [
+            -95.5946,
+            29.7675
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9004492819924407,
+          "coordinates": [
+            -95.6032,
+            29.76
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7479234826631984,
+          "coordinates": [
+            -95.604,
+            29.7637
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5404297453707558,
+          "coordinates": [
+            -95.5969,
+            29.763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7089036434017586,
+          "coordinates": [
+            -95.6038,
+            29.7644
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4693397242983561,
+          "coordinates": [
+            -95.5989,
+            29.765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6989467066910932,
+          "coordinates": [
+            -95.604,
+            29.7649
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24657689843072692,
+          "coordinates": [
+            -95.5903,
+            29.7696
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5121145909008991,
+          "coordinates": [
+            -95.6009,
+            29.7658
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5728133057554344,
+          "coordinates": [
+            -95.602,
+            29.7656
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.3145232690556527,
+          "coordinates": [
+            -95.5986,
+            29.7679
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6187440336743907,
+          "coordinates": [
+            -95.5982,
+            29.7622
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.21195593721788844,
+          "coordinates": [
+            -95.5951,
+            29.7675
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3059082037502652,
+          "coordinates": [
+            -95.599,
+            29.7688
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.333588859775343,
+          "coordinates": [
+            -95.5993,
+            29.7684
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5768205477996974,
+          "coordinates": [
+            -95.6035,
+            29.7681
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8911683525631852,
+          "coordinates": [
+            -95.6034,
+            29.7603
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6169278187605705,
+          "coordinates": [
+            -95.6024,
+            29.765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5174845232341911,
+          "coordinates": [
+            -95.5946,
+            29.763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8332025757803928,
+          "coordinates": [
+            -95.5869,
+            29.7807
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.14235192037815902,
+          "coordinates": [
+            -95.5958,
+            29.7689
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.35419689716649966,
+          "coordinates": [
+            -95.599,
+            29.7674
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5792662633821878,
+          "coordinates": [
+            -95.591,
+            29.7626
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4682015524706619,
+          "coordinates": [
+            -95.6019,
+            29.769
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6341701771161223,
+          "coordinates": [
+            -95.6042,
+            29.7673
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.596580025327327,
+          "coordinates": [
+            -95.5998,
+            29.7633
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.44660180920707443,
+          "coordinates": [
+            -95.5904,
+            29.776
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9315830002276642,
+          "coordinates": [
+            -95.5868,
+            29.7823
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9374198206416777,
+          "coordinates": [
+            -95.5866,
+            29.7823
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8339192312242505,
+          "coordinates": [
+            -95.5989,
+            29.7591
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8574659952608087,
+          "coordinates": [
+            -95.5991,
+            29.7588
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9201068927571774,
+          "coordinates": [
+            -95.5993,
+            29.7579
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8610008115864684,
+          "coordinates": [
+            -95.5986,
+            29.7586
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5183758884118572,
+          "coordinates": [
+            -95.6029,
+            29.7699
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.48056974276253195,
+          "coordinates": [
+            -95.5902,
+            29.7645
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.49768519935271344,
+          "coordinates": [
+            -95.591,
+            29.7771
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.48381564735740845,
+          "coordinates": [
+            -95.5905,
+            29.7643
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6493939478632816,
+          "coordinates": [
+            -95.5856,
+            29.7761
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5525581313187923,
+          "coordinates": [
+            -95.5855,
+            29.7729
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9602634587979005,
+          "coordinates": [
+            -95.5901,
+            29.7839
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5083908600226031,
+          "coordinates": [
+            -95.5905,
+            29.7639
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.777263804976434,
+          "coordinates": [
+            -95.5893,
+            29.7601
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9276237484957045,
+          "coordinates": [
+            -95.6021,
+            29.7589
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.43890368367586435,
+          "coordinates": [
+            -95.6016,
+            29.7706
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.048412121994190115,
+          "coordinates": [
+            -95.5937,
+            29.77
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8048130282392058,
+          "coordinates": [
+            -95.5893,
+            29.7813
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9114056647013161,
+          "coordinates": [
+            -95.5861,
+            29.7816
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.48940080031641725,
+          "coordinates": [
+            -95.591,
+            29.764
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.9418319917804833,
+          "coordinates": [
+            -95.5857,
+            29.7819
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6060521325035892,
+          "coordinates": [
+            -95.6042,
+            29.7688
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.33739835319600253,
+          "coordinates": [
+            -95.5912,
+            29.7664
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.4554379540593326,
+          "coordinates": [
+            -95.5911,
+            29.7645
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6320380625824211,
+          "coordinates": [
+            -95.5934,
+            29.7796
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6320380625824211,
+          "coordinates": [
+            -95.5934,
+            29.7796
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.9374198206416777,
+          "coordinates": [
+            -95.5866,
+            29.7823
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.579631131534211,
+          "coordinates": [
+            -95.5946,
+            29.7621
+          ]
+        }
+      ],
+      "top_3_categories": [
+        {
+          "category": "Storm Debris",
+          "count": 209,
+          "percentage": 71
+        },
+        {
+          "category": "Flood & Drainage",
+          "count": 31,
+          "percentage": 11
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "count": 22,
+          "percentage": 8
+        }
+      ]
+    },
+    {
+      "marker_name": "Memorial Drive United Methodist Chruch",
+      "marker_type": "church",
+      "coordinates": [
+        -95.56741506666665,
+        29.771985555555553
+      ],
+      "total_calls": 277,
+      "call_breakdown": {
+        "Storm Debris": 145,
+        "Nuisance & Code": 4,
+        "Power Outage": 35,
+        "Other": 6,
+        "Maintenance": 50,
+        "Flood & Drainage": 23,
+        "Traffic & Infrastructure": 14
+      },
+      "calls_within_1mile": 277,
+      "assigned_calls": [
+        {
+          "category": "Storm Debris",
+          "distance": 0.9906990056250564,
+          "coordinates": [
+            -95.5541,
+            29.7635
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9979595357415407,
+          "coordinates": [
+            -95.5534,
+            29.7642
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.47559971174190496,
+          "coordinates": [
+            -95.5614,
+            29.7675
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9706521586106539,
+          "coordinates": [
+            -95.5541,
+            29.764
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.21274693891038557,
+          "coordinates": [
+            -95.5639,
+            29.7724
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.47559971174190496,
+          "coordinates": [
+            -95.5614,
+            29.7675
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6949854731131816,
+          "coordinates": [
+            -95.5787,
+            29.7697
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5270929212064817,
+          "coordinates": [
+            -95.5758,
+            29.7697
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5507469021875342,
+          "coordinates": [
+            -95.5756,
+            29.7756
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.16740792982510208,
+          "coordinates": [
+            -95.57,
+            29.7729
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7400653619906253,
+          "coordinates": [
+            -95.5591,
+            29.7799
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.18871204368950575,
+          "coordinates": [
+            -95.5643,
+            29.7716
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.622092025531421,
+          "coordinates": [
+            -95.5733,
+            29.7794
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5024175552204835,
+          "coordinates": [
+            -95.5752,
+            29.7693
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5526049660981827,
+          "coordinates": [
+            -95.5605,
+            29.7667
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.44698742637633937,
+          "coordinates": [
+            -95.5624,
+            29.7672
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.59601936000938,
+          "coordinates": [
+            -95.5575,
+            29.7714
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.59601936000938,
+          "coordinates": [
+            -95.5575,
+            29.7714
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.3684604908205488,
+          "coordinates": [
+            -95.5613,
+            29.7725
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6748016667429579,
+          "coordinates": [
+            -95.5759,
+            29.7784
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.42941009118071083,
+          "coordinates": [
+            -95.5646,
+            29.7777
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5526853833089876,
+          "coordinates": [
+            -95.5653,
+            29.7642
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8097887637023372,
+          "coordinates": [
+            -95.5753,
+            29.7815
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.25087305107601177,
+          "coordinates": [
+            -95.5641,
+            29.7742
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5092374930203407,
+          "coordinates": [
+            -95.5602,
+            29.7681
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6563612248874516,
+          "coordinates": [
+            -95.5705,
+            29.7811
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5084423373899047,
+          "coordinates": [
+            -95.5723,
+            29.778
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.143345477005606,
+          "coordinates": [
+            -95.5695,
+            29.773
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.771484374181915,
+          "coordinates": [
+            -95.5579,
+            29.7795
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.22542154928637256,
+          "coordinates": [
+            -95.5707,
+            29.7704
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.1434609706228386,
+          "coordinates": [
+            -95.5697,
+            29.7726
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.950399034249701,
+          "coordinates": [
+            -95.5779,
+            29.7823
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8495203983146581,
+          "coordinates": [
+            -95.5753,
+            29.7822
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.1434609706228386,
+          "coordinates": [
+            -95.5697,
+            29.7726
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.4602083434832013,
+          "coordinates": [
+            -95.5629,
+            29.7666
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8724913720469121,
+          "coordinates": [
+            -95.5534,
+            29.7686
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6398590328029863,
+          "coordinates": [
+            -95.5759,
+            29.7776
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9148402218592168,
+          "coordinates": [
+            -95.5789,
+            29.7807
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6637251905221474,
+          "coordinates": [
+            -95.5565,
+            29.7704
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.45625253788064946,
+          "coordinates": [
+            -95.5748,
+            29.7704
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6748016667429579,
+          "coordinates": [
+            -95.5759,
+            29.7784
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9794564514106839,
+          "coordinates": [
+            -95.5792,
+            29.7818
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9286253980919589,
+          "coordinates": [
+            -95.5545,
+            29.7794
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5113038598429697,
+          "coordinates": [
+            -95.5753,
+            29.7748
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.25366813067937155,
+          "coordinates": [
+            -95.5648,
+            29.7691
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6383971667810866,
+          "coordinates": [
+            -95.5776,
+            29.7693
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5370371185028852,
+          "coordinates": [
+            -95.5593,
+            29.7687
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6351246743022836,
+          "coordinates": [
+            -95.578,
+            29.7717
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5352160278704543,
+          "coordinates": [
+            -95.5663,
+            29.7643
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.19599137590481053,
+          "coordinates": [
+            -95.5652,
+            29.7699
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5294138227262883,
+          "coordinates": [
+            -95.5693,
+            29.7645
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.45211431279870784,
+          "coordinates": [
+            -95.5748,
+            29.7733
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6748016667429579,
+          "coordinates": [
+            -95.5759,
+            29.7784
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9065974339031929,
+          "coordinates": [
+            -95.5523,
+            29.7718
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5914676182262103,
+          "coordinates": [
+            -95.5729,
+            29.7791
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.613289234044337,
+          "coordinates": [
+            -95.5761,
+            29.7673
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8724913720469121,
+          "coordinates": [
+            -95.5534,
+            29.7686
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.728930905420069,
+          "coordinates": [
+            -95.5566,
+            29.7768
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.972390661804609,
+          "coordinates": [
+            -95.557,
+            29.7612
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.23879726669314358,
+          "coordinates": [
+            -95.5641,
+            29.7739
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9583765869074169,
+          "coordinates": [
+            -95.5781,
+            29.7823
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9257138538738112,
+          "coordinates": [
+            -95.552,
+            29.7713
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.728930905420069,
+          "coordinates": [
+            -95.5566,
+            29.7768
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6521606055615563,
+          "coordinates": [
+            -95.5756,
+            29.7782
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.728930905420069,
+          "coordinates": [
+            -95.5566,
+            29.7768
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6230642546612329,
+          "coordinates": [
+            -95.5726,
+            29.7798
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.16740792982510208,
+          "coordinates": [
+            -95.57,
+            29.7729
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.838915030930947,
+          "coordinates": [
+            -95.5716,
+            29.7604
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4652291395742015,
+          "coordinates": [
+            -95.5695,
+            29.7655
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.45509111945740083,
+          "coordinates": [
+            -95.5748,
+            29.7735
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.18919498925746148,
+          "coordinates": [
+            -95.567,
+            29.7747
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6070072472414509,
+          "coordinates": [
+            -95.5752,
+            29.7776
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.9952746402711141,
+          "coordinates": [
+            -95.563,
+            29.7581
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.9959404217194647,
+          "coordinates": [
+            -95.5541,
+            29.7806
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.35695513486629815,
+          "coordinates": [
+            -95.5717,
+            29.7684
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.9952746402711141,
+          "coordinates": [
+            -95.563,
+            29.7581
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.59601936000938,
+          "coordinates": [
+            -95.5575,
+            29.7714
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7883185239237822,
+          "coordinates": [
+            -95.5552,
+            29.7762
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9790897351287984,
+          "coordinates": [
+            -95.5692,
+            29.7579
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9956994077871001,
+          "coordinates": [
+            -95.5696,
+            29.7577
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.66457215493173,
+          "coordinates": [
+            -95.5768,
+            29.7771
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6958885285615444,
+          "coordinates": [
+            -95.5779,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6885922719433376,
+          "coordinates": [
+            -95.5759,
+            29.7787
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7480124479662141,
+          "coordinates": [
+            -95.5551,
+            29.7737
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7147482334235533,
+          "coordinates": [
+            -95.5726,
+            29.7813
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6164563525349006,
+          "coordinates": [
+            -95.5577,
+            29.7749
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9881460155296842,
+          "coordinates": [
+            -95.5794,
+            29.7818
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.849547947886795,
+          "coordinates": [
+            -95.5534,
+            29.7702
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7335376773486414,
+          "coordinates": [
+            -95.5554,
+            29.77
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5042619633283436,
+          "coordinates": [
+            -95.5654,
+            29.7649
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7469675014541257,
+          "coordinates": [
+            -95.5759,
+            29.7799
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.5985320551039375,
+          "coordinates": [
+            -95.5575,
+            29.771
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5985320551039375,
+          "coordinates": [
+            -95.5575,
+            29.771
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5985320551039375,
+          "coordinates": [
+            -95.5575,
+            29.771
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.590301359348143,
+          "coordinates": [
+            -95.5579,
+            29.7698
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.421394680186307,
+          "coordinates": [
+            -95.5657,
+            29.7779
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7800729303592239,
+          "coordinates": [
+            -95.5787,
+            29.7776
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7386876305111334,
+          "coordinates": [
+            -95.5723,
+            29.7818
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7659607278465858,
+          "coordinates": [
+            -95.5795,
+            29.7684
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.285483217538753,
+          "coordinates": [
+            -95.5695,
+            29.7757
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7583339225502878,
+          "coordinates": [
+            -95.5733,
+            29.7817
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.916227005717238,
+          "coordinates": [
+            -95.5558,
+            29.7806
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.728930905420069,
+          "coordinates": [
+            -95.5566,
+            29.7768
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2620338632333559,
+          "coordinates": [
+            -95.5705,
+            29.7693
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.6201556054006334,
+          "coordinates": [
+            -95.5644,
+            29.7634
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.683341631934494,
+          "coordinates": [
+            -95.5786,
+            29.7701
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5208525782834418,
+          "coordinates": [
+            -95.5728,
+            29.7779
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.22237639662506384,
+          "coordinates": [
+            -95.5705,
+            29.7702
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2346591268120328,
+          "coordinates": [
+            -95.5702,
+            29.7696
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8015731062347374,
+          "coordinates": [
+            -95.5545,
+            29.769
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8015731062347374,
+          "coordinates": [
+            -95.5545,
+            29.769
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.697654622378976,
+          "coordinates": [
+            -95.579,
+            29.7729
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.3677098984569786,
+          "coordinates": [
+            -95.5613,
+            29.7716
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.35825844147076563,
+          "coordinates": [
+            -95.5631,
+            29.7684
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8407515546433824,
+          "coordinates": [
+            -95.5551,
+            29.7778
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6717549867696516,
+          "coordinates": [
+            -95.5585,
+            29.7661
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3556385147638665,
+          "coordinates": [
+            -95.5665,
+            29.7669
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.34703500030672213,
+          "coordinates": [
+            -95.5621,
+            29.77
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.7390876405473236,
+          "coordinates": [
+            -95.5611,
+            29.7628
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7335376773486414,
+          "coordinates": [
+            -95.5554,
+            29.77
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.13103215062836418,
+          "coordinates": [
+            -95.5661,
+            29.7735
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8273581192294515,
+          "coordinates": [
+            -95.5748,
+            29.7821
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9450509373239797,
+          "coordinates": [
+            -95.5727,
+            29.7591
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9706521586106539,
+          "coordinates": [
+            -95.5541,
+            29.764
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5603360341690656,
+          "coordinates": [
+            -95.5719,
+            29.7791
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2213707262608435,
+          "coordinates": [
+            -95.5711,
+            29.7718
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.28742980928907735,
+          "coordinates": [
+            -95.5702,
+            29.7686
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.22158951757571582,
+          "coordinates": [
+            -95.5708,
+            29.7707
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8131634788702571,
+          "coordinates": [
+            -95.5562,
+            29.7786
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5363952046184788,
+          "coordinates": [
+            -95.5717,
+            29.7788
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5639133649152241,
+          "coordinates": [
+            -95.5708,
+            29.7796
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3855842192708127,
+          "coordinates": [
+            -95.5691,
+            29.7666
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3656856489975413,
+          "coordinates": [
+            -95.5671,
+            29.7667
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2255407603874787,
+          "coordinates": [
+            -95.5704,
+            29.77
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.46859566630797966,
+          "coordinates": [
+            -95.5697,
+            29.7655
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.14813649007005125,
+          "coordinates": [
+            -95.5693,
+            29.7706
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5407214522290785,
+          "coordinates": [
+            -95.5717,
+            29.7651
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5007046924327997,
+          "coordinates": [
+            -95.5713,
+            29.7784
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9090044607239187,
+          "coordinates": [
+            -95.563,
+            29.7594
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9756892338163131,
+          "coordinates": [
+            -95.5541,
+            29.7801
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3129089486444765,
+          "coordinates": [
+            -95.5704,
+            29.7757
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6534510313234373,
+          "coordinates": [
+            -95.5614,
+            29.7641
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6534510313234373,
+          "coordinates": [
+            -95.5614,
+            29.7641
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9572400126429773,
+          "coordinates": [
+            -95.5535,
+            29.7652
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5797446106588364,
+          "coordinates": [
+            -95.5748,
+            29.7774
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9153626095971777,
+          "coordinates": [
+            -95.5562,
+            29.763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7774084573561691,
+          "coordinates": [
+            -95.5571,
+            29.7788
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5905382915832154,
+          "coordinates": [
+            -95.576,
+            29.7678
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.18871204368950575,
+          "coordinates": [
+            -95.5643,
+            29.7716
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.6163966986513582,
+          "coordinates": [
+            -95.5599,
+            29.7659
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6163966986513582,
+          "coordinates": [
+            -95.5599,
+            29.7659
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6163966986513582,
+          "coordinates": [
+            -95.5599,
+            29.7659
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.6163966986513582,
+          "coordinates": [
+            -95.5599,
+            29.7659
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8201182602395127,
+          "coordinates": [
+            -95.5767,
+            29.7807
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24447650166145318,
+          "coordinates": [
+            -95.5686,
+            29.7686
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5430232609426255,
+          "coordinates": [
+            -95.5593,
+            29.7685
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7898316584411953,
+          "coordinates": [
+            -95.555,
+            29.7758
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.868569119726987,
+          "coordinates": [
+            -95.5544,
+            29.7775
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.38337266293286315,
+          "coordinates": [
+            -95.5696,
+            29.7772
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.531177951797449,
+          "coordinates": [
+            -95.5672,
+            29.7643
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5752896866309992,
+          "coordinates": [
+            -95.5742,
+            29.7661
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.41003635477894396,
+          "coordinates": [
+            -95.5652,
+            29.7776
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.37303592347957354,
+          "coordinates": [
+            -95.5646,
+            29.7768
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5489291328056582,
+          "coordinates": [
+            -95.5663,
+            29.7641
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.41043227077639843,
+          "coordinates": [
+            -95.5646,
+            29.7774
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.26257385648083104,
+          "coordinates": [
+            -95.5678,
+            29.7682
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6901519377819364,
+          "coordinates": [
+            -95.5773,
+            29.7771
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5442854434188631,
+          "coordinates": [
+            -95.5761,
+            29.7697
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6383637274192338,
+          "coordinates": [
+            -95.5765,
+            29.7768
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8201182602395127,
+          "coordinates": [
+            -95.5767,
+            29.7807
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.9372900455076837,
+          "coordinates": [
+            -95.5575,
+            29.7615
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7335376773486414,
+          "coordinates": [
+            -95.5554,
+            29.77
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8648600635053941,
+          "coordinates": [
+            -95.5792,
+            29.7792
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.9952746402711141,
+          "coordinates": [
+            -95.563,
+            29.7581
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.24447650166145318,
+          "coordinates": [
+            -95.5686,
+            29.7686
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8916482129225674,
+          "coordinates": [
+            -95.5666,
+            29.7591
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8724913720469121,
+          "coordinates": [
+            -95.5534,
+            29.7686
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5492918798307607,
+          "coordinates": [
+            -95.5593,
+            29.7683
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7792005433098206,
+          "coordinates": [
+            -95.5711,
+            29.7828
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8109886619473281,
+          "coordinates": [
+            -95.5553,
+            29.7772
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.45509111945740083,
+          "coordinates": [
+            -95.5748,
+            29.7735
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6965181061271263,
+          "coordinates": [
+            -95.5786,
+            29.7747
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.08443265631776015,
+          "coordinates": [
+            -95.5682,
+            29.773
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8695513991342352,
+          "coordinates": [
+            -95.5784,
+            29.7802
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.926034013420308,
+          "coordinates": [
+            -95.5541,
+            29.7652
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8209587642747053,
+          "coordinates": [
+            -95.5539,
+            29.7701
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.48506401248167347,
+          "coordinates": [
+            -95.5727,
+            29.7773
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.9372900455076837,
+          "coordinates": [
+            -95.5575,
+            29.7615
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8640017362946298,
+          "coordinates": [
+            -95.5694,
+            29.7596
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5328536511761888,
+          "coordinates": [
+            -95.5588,
+            29.7701
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5328536511761888,
+          "coordinates": [
+            -95.5588,
+            29.7701
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.9035808263936463,
+          "coordinates": [
+            -95.5692,
+            29.759
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.9035808263936463,
+          "coordinates": [
+            -95.5692,
+            29.759
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.9318466594083156,
+          "coordinates": [
+            -95.5571,
+            29.7619
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6392869702816951,
+          "coordinates": [
+            -95.5607,
+            29.7648
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5106388419977663,
+          "coordinates": [
+            -95.5759,
+            29.7726
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5106388419977663,
+          "coordinates": [
+            -95.5759,
+            29.7726
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.19599137590481053,
+          "coordinates": [
+            -95.5652,
+            29.7699
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9302199070097753,
+          "coordinates": [
+            -95.5532,
+            29.7666
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.1434609706228386,
+          "coordinates": [
+            -95.5697,
+            29.7726
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5106388419977663,
+          "coordinates": [
+            -95.5759,
+            29.7726
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8407515546433824,
+          "coordinates": [
+            -95.5551,
+            29.7778
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5084423373899047,
+          "coordinates": [
+            -95.5723,
+            29.778
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6935033967886688,
+          "coordinates": [
+            -95.5584,
+            29.7657
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6935033967886688,
+          "coordinates": [
+            -95.5584,
+            29.7657
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5339687889596478,
+          "coordinates": [
+            -95.5586,
+            29.7709
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5046625033787218,
+          "coordinates": [
+            -95.5758,
+            29.7726
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5106388419977663,
+          "coordinates": [
+            -95.5759,
+            29.7726
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7009028430218093,
+          "coordinates": [
+            -95.5732,
+            29.7808
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8405335231392574,
+          "coordinates": [
+            -95.5787,
+            29.7792
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5106388419977663,
+          "coordinates": [
+            -95.5759,
+            29.7726
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9297610559442665,
+          "coordinates": [
+            -95.5638,
+            29.7589
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7938731407244096,
+          "coordinates": [
+            -95.5699,
+            29.7607
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.9560321603450667,
+          "coordinates": [
+            -95.5587,
+            29.7604
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8405015953355325,
+          "coordinates": [
+            -95.5704,
+            29.7601
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.6878779632219768,
+          "coordinates": [
+            -95.5562,
+            29.7699
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5908897213142476,
+          "coordinates": [
+            -95.5769,
+            29.7743
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5106388419977663,
+          "coordinates": [
+            -95.5759,
+            29.7726
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5835793396871177,
+          "coordinates": [
+            -95.5769,
+            29.7701
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2737876612029801,
+          "coordinates": [
+            -95.5647,
+            29.7688
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6236819067968912,
+          "coordinates": [
+            -95.5722,
+            29.78
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.245077813535842,
+          "coordinates": [
+            -95.5714,
+            29.7712
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4490520617099906,
+          "coordinates": [
+            -95.5679,
+            29.7655
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6749241938132319,
+          "coordinates": [
+            -95.559,
+            29.7655
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7711162602971868,
+          "coordinates": [
+            -95.58,
+            29.7697
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7711162602971868,
+          "coordinates": [
+            -95.58,
+            29.7697
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.15732712921505473,
+          "coordinates": [
+            -95.569,
+            29.7738
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.864560040259318,
+          "coordinates": [
+            -95.553,
+            29.7721
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7480124479662141,
+          "coordinates": [
+            -95.5551,
+            29.7737
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.440212827412952,
+          "coordinates": [
+            -95.5649,
+            29.766
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.21598295615257002,
+          "coordinates": [
+            -95.5688,
+            29.7691
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.21598295615257002,
+          "coordinates": [
+            -95.5688,
+            29.7691
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4995931592545952,
+          "coordinates": [
+            -95.5741,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.49147320392488836,
+          "coordinates": [
+            -95.5741,
+            29.7761
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9658975240806692,
+          "coordinates": [
+            -95.5543,
+            29.7801
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5106388419977663,
+          "coordinates": [
+            -95.5759,
+            29.7726
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5079593009491651,
+          "coordinates": [
+            -95.5741,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5128735347906718,
+          "coordinates": [
+            -95.5589,
+            29.7713
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.849547947886795,
+          "coordinates": [
+            -95.5534,
+            29.7702
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7903475386295045,
+          "coordinates": [
+            -95.5579,
+            29.7799
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7903475386295045,
+          "coordinates": [
+            -95.5579,
+            29.7799
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.681344168598186,
+          "coordinates": [
+            -95.5564,
+            29.7744
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.681344168598186,
+          "coordinates": [
+            -95.5564,
+            29.7744
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.681344168598186,
+          "coordinates": [
+            -95.5564,
+            29.7744
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.681344168598186,
+          "coordinates": [
+            -95.5564,
+            29.7744
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9994689772326861,
+          "coordinates": [
+            -95.5791,
+            29.7823
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6510804044005026,
+          "coordinates": [
+            -95.5567,
+            29.7735
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.32182272078552804,
+          "coordinates": [
+            -95.5697,
+            29.7762
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7875187295058417,
+          "coordinates": [
+            -95.5753,
+            29.7811
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.21274693891038557,
+          "coordinates": [
+            -95.5639,
+            29.7724
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.9959404217194647,
+          "coordinates": [
+            -95.5541,
+            29.7806
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8724913720469121,
+          "coordinates": [
+            -95.5534,
+            29.7686
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.14320809127923825,
+          "coordinates": [
+            -95.5665,
+            29.7739
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.7927751338858917,
+          "coordinates": [
+            -95.5546,
+            29.7748
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8495203983146581,
+          "coordinates": [
+            -95.5753,
+            29.7822
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7927751338858917,
+          "coordinates": [
+            -95.5546,
+            29.7748
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.41094545655279663,
+          "coordinates": [
+            -95.5711,
+            29.777
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.3684604908205488,
+          "coordinates": [
+            -95.5613,
+            29.7725
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7362687461538101,
+          "coordinates": [
+            -95.5685,
+            29.7826
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7860510298670904,
+          "coordinates": [
+            -95.5546,
+            29.7696
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.35480004695341527,
+          "coordinates": [
+            -95.5715,
+            29.7757
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.37496051793099583,
+          "coordinates": [
+            -95.5633,
+            29.7679
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.37946347460093016,
+          "coordinates": [
+            -95.5635,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.26719544488138947,
+          "coordinates": [
+            -95.5708,
+            29.7745
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.26949437455173203,
+          "coordinates": [
+            -95.5635,
+            29.7739
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.20412303587725944,
+          "coordinates": [
+            -95.569,
+            29.7746
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3606386241715561,
+          "coordinates": [
+            -95.5634,
+            29.7681
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5144030801164227,
+          "coordinates": [
+            -95.5755,
+            29.7695
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5529379382440534,
+          "coordinates": [
+            -95.5761,
+            29.7693
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5795480523768947,
+          "coordinates": [
+            -95.5759,
+            29.776
+          ]
+        }
+      ],
+      "top_3_categories": [
+        {
+          "category": "Storm Debris",
+          "count": 145,
+          "percentage": 52
+        },
+        {
+          "category": "Maintenance",
+          "count": 50,
+          "percentage": 18
+        },
+        {
+          "category": "Power Outage",
+          "count": 35,
+          "percentage": 13
+        }
+      ]
+    },
+    {
+      "marker_name": "Saint John Vianney Catholic Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.61435343846155,
+        29.76994747307692
+      ],
+      "total_calls": 103,
+      "call_breakdown": {
+        "Nuisance & Code": 5,
+        "Traffic & Infrastructure": 7,
+        "Other": 2,
+        "Storm Debris": 68,
+        "Maintenance": 3,
+        "Flood & Drainage": 6,
+        "Power Outage": 12
+      },
+      "calls_within_1mile": 103,
+      "assigned_calls": [
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.15623226246651634,
+          "coordinates": [
+            -95.6118,
+            29.7695
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.953534462492241,
+          "coordinates": [
+            -95.6062,
+            29.7581
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.5912068829037657,
+          "coordinates": [
+            -95.6045,
+            29.7697
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5986321743547769,
+          "coordinates": [
+            -95.6044,
+            29.7693
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.39846005712470817,
+          "coordinates": [
+            -95.6081,
+            29.768
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.33405559266216556,
+          "coordinates": [
+            -95.6174,
+            29.7659
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.8899739803851282,
+          "coordinates": [
+            -95.611,
+            29.7574
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.9820526652121296,
+          "coordinates": [
+            -95.6239,
+            29.7584
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.44436975949238117,
+          "coordinates": [
+            -95.6086,
+            29.774
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.4577134409882991,
+          "coordinates": [
+            -95.6086,
+            29.7743
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.953534462492241,
+          "coordinates": [
+            -95.6062,
+            29.7581
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5050704735648083,
+          "coordinates": [
+            -95.6093,
+            29.7641
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7354441713207551,
+          "coordinates": [
+            -95.6167,
+            29.7595
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.8868090586331607,
+          "coordinates": [
+            -95.6053,
+            29.7598
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.8868090586331607,
+          "coordinates": [
+            -95.6053,
+            29.7598
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6528230913003195,
+          "coordinates": [
+            -95.6142,
+            29.7605
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6208128417521604,
+          "coordinates": [
+            -95.6153,
+            29.761
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3989022308744186,
+          "coordinates": [
+            -95.6095,
+            29.766
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.637167570861029,
+          "coordinates": [
+            -95.6045,
+            29.7665
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3101992464350813,
+          "coordinates": [
+            -95.6178,
+            29.7666
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.8245182651208666,
+          "coordinates": [
+            -95.616,
+            29.7581
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2491236472770728,
+          "coordinates": [
+            -95.6102,
+            29.7699
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.7081961097998181,
+          "coordinates": [
+            -95.6141,
+            29.7597
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5487397053280866,
+          "coordinates": [
+            -95.6053,
+            29.7688
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.17252568557536355,
+          "coordinates": [
+            -95.616,
+            29.7679
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2774300929142394,
+          "coordinates": [
+            -95.6152,
+            29.766
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.15623226246651634,
+          "coordinates": [
+            -95.6118,
+            29.7695
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.5487397053280866,
+          "coordinates": [
+            -95.6053,
+            29.7688
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.953534462492241,
+          "coordinates": [
+            -95.6062,
+            29.7581
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7195529361437262,
+          "coordinates": [
+            -95.6042,
+            29.7644
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.33405559266216556,
+          "coordinates": [
+            -95.6174,
+            29.7659
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.620785404650214,
+          "coordinates": [
+            -95.6066,
+            29.7759
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3005103696202177,
+          "coordinates": [
+            -95.6145,
+            29.7656
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.529840186196143,
+          "coordinates": [
+            -95.6063,
+            29.7731
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9192423343346924,
+          "coordinates": [
+            -95.6167,
+            29.7568
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7080447271778232,
+          "coordinates": [
+            -95.616,
+            29.7598
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6205632052239923,
+          "coordinates": [
+            -95.6167,
+            29.7612
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9274337723959485,
+          "coordinates": [
+            -95.6041,
+            29.7599
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.953534462492241,
+          "coordinates": [
+            -95.6062,
+            29.7581
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.34918417854769984,
+          "coordinates": [
+            -95.616,
+            29.7651
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6759034410744951,
+          "coordinates": [
+            -95.6045,
+            29.7652
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5466042513584559,
+          "coordinates": [
+            -95.6132,
+            29.7621
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8937277247325572,
+          "coordinates": [
+            -95.6043,
+            29.7604
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8899739803851282,
+          "coordinates": [
+            -95.611,
+            29.7574
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9602105628028788,
+          "coordinates": [
+            -95.6058,
+            29.7582
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6220629573441074,
+          "coordinates": [
+            -95.6082,
+            29.7627
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.34522244049286144,
+          "coordinates": [
+            -95.6086,
+            29.7701
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.953534462492241,
+          "coordinates": [
+            -95.6062,
+            29.7581
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.805958173134754,
+          "coordinates": [
+            -95.6068,
+            29.7603
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5501555715914747,
+          "coordinates": [
+            -95.6128,
+            29.7621
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.433542872344747,
+          "coordinates": [
+            -95.6081,
+            29.7668
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6670189261074089,
+          "coordinates": [
+            -95.616,
+            29.7604
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9137564784757022,
+          "coordinates": [
+            -95.616,
+            29.7568
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5521164294934222,
+          "coordinates": [
+            -95.6053,
+            29.7685
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4740431658437432,
+          "coordinates": [
+            -95.609,
+            29.7649
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.9924232579029612,
+          "coordinates": [
+            -95.6059,
+            29.7576
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4133519095439071,
+          "coordinates": [
+            -95.6095,
+            29.7657
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6670189261074089,
+          "coordinates": [
+            -95.616,
+            29.7604
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8646606499136158,
+          "coordinates": [
+            -95.6167,
+            29.7576
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9311902156126807,
+          "coordinates": [
+            -95.6058,
+            29.7587
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.777308193425755,
+          "coordinates": [
+            -95.6161,
+            29.7588
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7039631901832437,
+          "coordinates": [
+            -95.6163,
+            29.7599
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4555331874459094,
+          "coordinates": [
+            -95.6123,
+            29.7636
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3096461118032506,
+          "coordinates": [
+            -95.6131,
+            29.7656
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.10343575428648083,
+          "coordinates": [
+            -95.6134,
+            29.7687
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5397766361119238,
+          "coordinates": [
+            -95.6068,
+            29.7657
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.48831414492167335,
+          "coordinates": [
+            -95.6076,
+            29.766
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.43422469893876325,
+          "coordinates": [
+            -95.6083,
+            29.7665
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2884319321068381,
+          "coordinates": [
+            -95.6149,
+            29.7658
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2944709261985795,
+          "coordinates": [
+            -95.6106,
+            29.7672
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24728936098034293,
+          "coordinates": [
+            -95.6149,
+            29.7664
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2439046450422755,
+          "coordinates": [
+            -95.6118,
+            29.7672
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6745142354258303,
+          "coordinates": [
+            -95.6167,
+            29.7604
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5639172466136565,
+          "coordinates": [
+            -95.6051,
+            29.7685
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6014648392331715,
+          "coordinates": [
+            -95.6048,
+            29.7673
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4043876255439225,
+          "coordinates": [
+            -95.6084,
+            29.7672
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6979879905971296,
+          "coordinates": [
+            -95.6053,
+            29.7636
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7060116313064416,
+          "coordinates": [
+            -95.6047,
+            29.7641
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7017584819736136,
+          "coordinates": [
+            -95.6042,
+            29.7649
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.9476094869002986,
+          "coordinates": [
+            -95.6062,
+            29.7582
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8245182651208666,
+          "coordinates": [
+            -95.616,
+            29.7581
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7015670368182784,
+          "coordinates": [
+            -95.6167,
+            29.76
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6554663598471161,
+          "coordinates": [
+            -95.6051,
+            29.7649
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.25979199635368233,
+          "coordinates": [
+            -95.614,
+            29.7662
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.501490659811247,
+          "coordinates": [
+            -95.6139,
+            29.7627
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9247510220175756,
+          "coordinates": [
+            -95.6043,
+            29.7598
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6962084344999703,
+          "coordinates": [
+            -95.6049,
+            29.7641
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6745142354258303,
+          "coordinates": [
+            -95.6167,
+            29.7604
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5639042449383566,
+          "coordinates": [
+            -95.6055,
+            29.7672
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.21797187394929682,
+          "coordinates": [
+            -95.6146,
+            29.7668
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6139680237466559,
+          "coordinates": [
+            -95.6053,
+            29.7658
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.746441256668498,
+          "coordinates": [
+            -95.6042,
+            29.7637
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5712164134258164,
+          "coordinates": [
+            -95.6055,
+            29.7669
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24822039854236622,
+          "coordinates": [
+            -95.6137,
+            29.7664
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4320736049102193,
+          "coordinates": [
+            -95.6118,
+            29.7641
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.6255040818328972,
+          "coordinates": [
+            -95.6063,
+            29.7757
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5462422201210256,
+          "coordinates": [
+            -95.6064,
+            29.7738
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.8646606499136158,
+          "coordinates": [
+            -95.6167,
+            29.7576
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4595924875150558,
+          "coordinates": [
+            -95.6078,
+            29.7665
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3575120750578009,
+          "coordinates": [
+            -95.6174,
+            29.7655
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.35267593588246826,
+          "coordinates": [
+            -95.6158,
+            29.765
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.7080447271778232,
+          "coordinates": [
+            -95.616,
+            29.7598
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.8101729460967629,
+          "coordinates": [
+            -95.6167,
+            29.7584
+          ]
+        }
+      ],
+      "top_3_categories": [
+        {
+          "category": "Storm Debris",
+          "count": 68,
+          "percentage": 66
+        },
+        {
+          "category": "Power Outage",
+          "count": 12,
+          "percentage": 12
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "count": 7,
+          "percentage": 7
+        }
+      ]
+    },
+    {
+      "marker_name": "Kendall Community Center",
+      "marker_type": "community-center",
+      "coordinates": [
+        -95.62058533042223,
+        29.772927358605735
+      ],
+      "total_calls": 87,
+      "call_breakdown": {
+        "Storm Debris": 55,
+        "Traffic & Infrastructure": 6,
+        "Flood & Drainage": 21,
+        "Other": 3,
+        "Maintenance": 1,
+        "Power Outage": 1
+      },
+      "calls_within_1mile": 87,
+      "assigned_calls": [
+        {
+          "category": "Storm Debris",
+          "distance": 0.6163625462704981,
+          "coordinates": [
+            -95.6301,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8644853463065475,
+          "coordinates": [
+            -95.6344,
+            29.7765
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5632496602649767,
+          "coordinates": [
+            -95.6239,
+            29.7653
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.9705856716958277,
+          "coordinates": [
+            -95.6257,
+            29.7596
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9805335758909416,
+          "coordinates": [
+            -95.6332,
+            29.7639
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9887672409776715,
+          "coordinates": [
+            -95.6363,
+            29.7686
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.8471968125359758,
+          "coordinates": [
+            -95.6254,
+            29.7614
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.27224640759031155,
+          "coordinates": [
+            -95.6225,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.17243146360619244,
+          "coordinates": [
+            -95.622,
+            29.7751
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.935388984533362,
+          "coordinates": [
+            -95.6352,
+            29.7682
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6315899418101608,
+          "coordinates": [
+            -95.6306,
+            29.7701
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.807920886179708,
+          "coordinates": [
+            -95.6331,
+            29.7686
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7681788401206052,
+          "coordinates": [
+            -95.6332,
+            29.771
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8261429773675779,
+          "coordinates": [
+            -95.6328,
+            29.7674
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.865323119322253,
+          "coordinates": [
+            -95.6338,
+            29.7679
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9404906594064455,
+          "coordinates": [
+            -95.6356,
+            29.769
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9943953567768321,
+          "coordinates": [
+            -95.6366,
+            29.7692
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8963069022799082,
+          "coordinates": [
+            -95.6349,
+            29.7692
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9986861576574798,
+          "coordinates": [
+            -95.6352,
+            29.766
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.9311086338934288,
+          "coordinates": [
+            -95.6356,
+            29.7695
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8417914523785356,
+          "coordinates": [
+            -95.6335,
+            29.7777
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9311086338934288,
+          "coordinates": [
+            -95.6356,
+            29.7695
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.27224640759031155,
+          "coordinates": [
+            -95.6225,
+            29.7765
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4221046618590472,
+          "coordinates": [
+            -95.6274,
+            29.7714
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.11580002676846392,
+          "coordinates": [
+            -95.6224,
+            29.7735
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8607296866104921,
+          "coordinates": [
+            -95.634,
+            29.7685
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5826220021033348,
+          "coordinates": [
+            -95.6303,
+            29.7729
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.5188073810602182,
+          "coordinates": [
+            -95.6289,
+            29.775
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.918544882732788,
+          "coordinates": [
+            -95.6359,
+            29.7731
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7779211382211912,
+          "coordinates": [
+            -95.6333,
+            29.7707
+          ]
+        },
+        {
+          "category": "Maintenance",
+          "distance": 0.8419384028714914,
+          "coordinates": [
+            -95.6342,
+            29.7759
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9311086338934288,
+          "coordinates": [
+            -95.6356,
+            29.7695
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9311086338934288,
+          "coordinates": [
+            -95.6356,
+            29.7695
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9311086338934288,
+          "coordinates": [
+            -95.6356,
+            29.7695
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.27224640759031155,
+          "coordinates": [
+            -95.6225,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8219979368985293,
+          "coordinates": [
+            -95.6342,
+            29.7743
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.6424882051221726,
+          "coordinates": [
+            -95.6292,
+            29.7674
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6922710387813782,
+          "coordinates": [
+            -95.6307,
+            29.7681
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8246907736908392,
+          "coordinates": [
+            -95.6317,
+            29.7659
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7323387974071975,
+          "coordinates": [
+            -95.6322,
+            29.7762
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8591139805439837,
+          "coordinates": [
+            -95.6349,
+            29.7734
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.658324176452147,
+          "coordinates": [
+            -95.6312,
+            29.7705
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.049525327710151466,
+          "coordinates": [
+            -95.6203,
+            29.7736
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.05555691809076944,
+          "coordinates": [
+            -95.6215,
+            29.7728
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.27224640759031155,
+          "coordinates": [
+            -95.6225,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6270063138854182,
+          "coordinates": [
+            -95.6272,
+            29.7659
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6614682701161911,
+          "coordinates": [
+            -95.6274,
+            29.7654
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.3942256346392968,
+          "coordinates": [
+            -95.625,
+            29.7687
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.3942256346392968,
+          "coordinates": [
+            -95.625,
+            29.7687
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.1748636936077198,
+          "coordinates": [
+            -95.6216,
+            29.7753
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.20769626229740573,
+          "coordinates": [
+            -95.6211,
+            29.7759
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.17788557237037914,
+          "coordinates": [
+            -95.6207,
+            29.7755
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.25978243744409313,
+          "coordinates": [
+            -95.6225,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.21745183709171953,
+          "coordinates": [
+            -95.6225,
+            29.7756
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9663248022374449,
+          "coordinates": [
+            -95.636,
+            29.777
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6831237348041123,
+          "coordinates": [
+            -95.6315,
+            29.7701
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6219150984929408,
+          "coordinates": [
+            -95.6309,
+            29.772
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.4234881908122833,
+          "coordinates": [
+            -95.6231,
+            29.7672
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8784722886988563,
+          "coordinates": [
+            -95.6345,
+            29.7769
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8444155936525576,
+          "coordinates": [
+            -95.6341,
+            29.7695
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.05388407495287208,
+          "coordinates": [
+            -95.6213,
+            29.7734
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8298082742045608,
+          "coordinates": [
+            -95.6344,
+            29.7736
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8837588894023005,
+          "coordinates": [
+            -95.6348,
+            29.7763
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.08124889007324149,
+          "coordinates": [
+            -95.6202,
+            29.7718
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.32868186376597625,
+          "coordinates": [
+            -95.6254,
+            29.7752
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6034018087653169,
+          "coordinates": [
+            -95.6303,
+            29.7752
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8534393110153606,
+          "coordinates": [
+            -95.6347,
+            29.7745
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9383950712079879,
+          "coordinates": [
+            -95.6362,
+            29.7738
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9702950723388719,
+          "coordinates": [
+            -95.6359,
+            29.7684
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9316717201518716,
+          "coordinates": [
+            -95.6352,
+            29.7775
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8466956793505402,
+          "coordinates": [
+            -95.6345,
+            29.775
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8884838010007012,
+          "coordinates": [
+            -95.6354,
+            29.7729
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.899883197090304,
+          "coordinates": [
+            -95.6337,
+            29.7666
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8647896799029456,
+          "coordinates": [
+            -95.635,
+            29.7726
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.9311086338934288,
+          "coordinates": [
+            -95.6356,
+            29.7695
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.45601272849071955,
+          "coordinates": [
+            -95.6274,
+            29.77
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.5866402736724504,
+          "coordinates": [
+            -95.6289,
+            29.7774
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7277784876468573,
+          "coordinates": [
+            -95.6317,
+            29.7687
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.166814369169914,
+          "coordinates": [
+            -95.6211,
+            29.7753
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6165597735460472,
+          "coordinates": [
+            -95.6297,
+            29.7688
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.4221046618590472,
+          "coordinates": [
+            -95.6274,
+            29.7714
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.759629169918528,
+          "coordinates": [
+            -95.6329,
+            29.7755
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.6365497620281658,
+          "coordinates": [
+            -95.6309,
+            29.7751
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7151710244492953,
+          "coordinates": [
+            -95.6325,
+            29.7725
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.7151710244492953,
+          "coordinates": [
+            -95.6325,
+            29.7725
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8527992011822784,
+          "coordinates": [
+            -95.6348,
+            29.7726
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5632496602649767,
+          "coordinates": [
+            -95.6239,
+            29.7653
+          ]
+        }
+      ],
+      "top_3_categories": [
+        {
+          "category": "Storm Debris",
+          "count": 55,
+          "percentage": 63
+        },
+        {
+          "category": "Flood & Drainage",
+          "count": 21,
+          "percentage": 24
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "count": 6,
+          "percentage": 7
+        }
+      ]
+    },
+    {
+      "marker_name": "Emmanuel Episcopal Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.61759711481481,
+        29.776190977777784
+      ],
+      "total_calls": 42,
+      "call_breakdown": {
+        "Storm Debris": 25,
+        "Flood & Drainage": 6,
+        "Other": 3,
+        "Traffic & Infrastructure": 6,
+        "Nuisance & Code": 1,
+        "Power Outage": 1
+      },
+      "calls_within_1mile": 42,
+      "assigned_calls": [
+        {
+          "category": "Storm Debris",
+          "distance": 0.6660335376886355,
+          "coordinates": [
+            -95.6092,
+            29.7825
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.3065309370730043,
+          "coordinates": [
+            -95.6226,
+            29.7771
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.1103544048120486,
+          "coordinates": [
+            -95.6182,
+            29.7777
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.10856922868510716,
+          "coordinates": [
+            -95.6189,
+            29.7751
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.1103544048120486,
+          "coordinates": [
+            -95.6182,
+            29.7777
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.7894732248690731,
+          "coordinates": [
+            -95.6064,
+            29.7822
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4488486313297905,
+          "coordinates": [
+            -95.6118,
+            29.7803
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.17430747574336525,
+          "coordinates": [
+            -95.6151,
+            29.7749
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.1103544048120486,
+          "coordinates": [
+            -95.6182,
+            29.7777
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.1103544048120486,
+          "coordinates": [
+            -95.6182,
+            29.7777
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24261966016340583,
+          "coordinates": [
+            -95.6216,
+            29.7767
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.1738904346377982,
+          "coordinates": [
+            -95.6202,
+            29.7773
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3046830240292504,
+          "coordinates": [
+            -95.6132,
+            29.7784
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.27913583889528704,
+          "coordinates": [
+            -95.6137,
+            29.7784
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24017563694439023,
+          "coordinates": [
+            -95.6216,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.24500438573752079,
+          "coordinates": [
+            -95.6216,
+            29.7769
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.7917795842633335,
+          "coordinates": [
+            -95.6065,
+            29.7824
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.18010724393470187,
+          "coordinates": [
+            -95.615,
+            29.7775
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.48600997209784697,
+          "coordinates": [
+            -95.6095,
+            29.7759
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.1257679184946343,
+          "coordinates": [
+            -95.6155,
+            29.7762
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.1963964386703261,
+          "coordinates": [
+            -95.6207,
+            29.7771
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.1302614765072809,
+          "coordinates": [
+            -95.6155,
+            29.7757
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.23418462856563213,
+          "coordinates": [
+            -95.6139,
+            29.7751
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.2730077196471439,
+          "coordinates": [
+            -95.6136,
+            29.7743
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.45610700836977797,
+          "coordinates": [
+            -95.61,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.4620430778006362,
+          "coordinates": [
+            -95.6099,
+            29.7759
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.1103544048120486,
+          "coordinates": [
+            -95.6182,
+            29.7777
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.1103544048120486,
+          "coordinates": [
+            -95.6182,
+            29.7777
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.43214634430801735,
+          "coordinates": [
+            -95.6104,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.37772010629700986,
+          "coordinates": [
+            -95.6113,
+            29.7763
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.18915089619919098,
+          "coordinates": [
+            -95.6207,
+            29.7757
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.43214634430801735,
+          "coordinates": [
+            -95.6104,
+            29.7765
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.19242337072829335,
+          "coordinates": [
+            -95.6207,
+            29.7769
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.23379906675332046,
+          "coordinates": [
+            -95.6137,
+            29.7761
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.23543739672140335,
+          "coordinates": [
+            -95.6148,
+            29.7738
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.49164781281552855,
+          "coordinates": [
+            -95.6094,
+            29.7763
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.1682627117647658,
+          "coordinates": [
+            -95.619,
+            29.7783
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8258786542694742,
+          "coordinates": [
+            -95.6059,
+            29.7825
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8258786542694742,
+          "coordinates": [
+            -95.6059,
+            29.7825
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8258786542694742,
+          "coordinates": [
+            -95.6059,
+            29.7825
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.8258786542694742,
+          "coordinates": [
+            -95.6059,
+            29.7825
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.23543739672140335,
+          "coordinates": [
+            -95.6148,
+            29.7738
+          ]
+        }
+      ],
+      "top_3_categories": [
+        {
+          "category": "Storm Debris",
+          "count": 25,
+          "percentage": 60
+        },
+        {
+          "category": "Flood & Drainage",
+          "count": 6,
+          "percentage": 14
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "count": 6,
+          "percentage": 14
+        }
+      ]
+    },
+    {
+      "marker_name": "Bridgepoint Bible Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.62048355714285,
+        29.782360052380948
+      ],
+      "total_calls": 35,
+      "call_breakdown": {
+        "Power Outage": 8,
+        "Nuisance & Code": 2,
+        "Storm Debris": 14,
+        "Other": 6,
+        "Traffic & Infrastructure": 4,
+        "Flood & Drainage": 1
+      },
+      "calls_within_1mile": 35,
+      "assigned_calls": [
+        {
+          "category": "Power Outage",
+          "distance": 0.5420259604806847,
+          "coordinates": [
+            -95.6289,
+            29.7795
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.3622784737759493,
+          "coordinates": [
+            -95.6207,
+            29.7876
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3622784737759493,
+          "coordinates": [
+            -95.6207,
+            29.7876
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5620480654128759,
+          "coordinates": [
+            -95.6293,
+            29.7796
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.25914988072551565,
+          "coordinates": [
+            -95.6178,
+            29.7853
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.27110933610386473,
+          "coordinates": [
+            -95.6244,
+            29.7804
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9334313786253298,
+          "coordinates": [
+            -95.6354,
+            29.7785
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.4020268406274386,
+          "coordinates": [
+            -95.6262,
+            29.7854
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.1976030225695001,
+          "coordinates": [
+            -95.6172,
+            29.7826
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.266668485496551,
+          "coordinates": [
+            -95.6225,
+            29.7858
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.1609788311490355,
+          "coordinates": [
+            -95.6186,
+            29.7807
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.5420259604806847,
+          "coordinates": [
+            -95.6289,
+            29.7795
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9173233701531239,
+          "coordinates": [
+            -95.6357,
+            29.781
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.6132614223933083,
+          "coordinates": [
+            -95.6298,
+            29.7787
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.8049057046948443,
+          "coordinates": [
+            -95.6338,
+            29.7809
+          ]
+        },
+        {
+          "category": "Nuisance & Code",
+          "distance": 0.1609788311490355,
+          "coordinates": [
+            -95.6186,
+            29.7807
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.9375903800430467,
+          "coordinates": [
+            -95.6359,
+            29.7801
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.1609788311490355,
+          "coordinates": [
+            -95.6186,
+            29.7807
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.1609788311490355,
+          "coordinates": [
+            -95.6186,
+            29.7807
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6132614223933083,
+          "coordinates": [
+            -95.6298,
+            29.7787
+          ]
+        },
+        {
+          "category": "Other",
+          "distance": 0.6132614223933083,
+          "coordinates": [
+            -95.6298,
+            29.7787
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.266668485496551,
+          "coordinates": [
+            -95.6225,
+            29.7858
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.48353702116458563,
+          "coordinates": [
+            -95.6266,
+            29.7778
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.3924076633759359,
+          "coordinates": [
+            -95.6177,
+            29.7875
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.3924076633759359,
+          "coordinates": [
+            -95.6177,
+            29.7875
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.49440211708958287,
+          "coordinates": [
+            -95.6277,
+            29.7789
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.3815566308766911,
+          "coordinates": [
+            -95.6167,
+            29.7868
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.3369352036931609,
+          "coordinates": [
+            -95.623,
+            29.778
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.6038252093856904,
+          "coordinates": [
+            -95.6294,
+            29.7783
+          ]
+        },
+        {
+          "category": "Traffic & Infrastructure",
+          "distance": 0.5994746252743371,
+          "coordinates": [
+            -95.6297,
+            29.779
+          ]
+        },
+        {
+          "category": "Flood & Drainage",
+          "distance": 0.51691651356599,
+          "coordinates": [
+            -95.6284,
+            29.7794
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.17341580601070578,
+          "coordinates": [
+            -95.6182,
+            29.7839
+          ]
+        },
+        {
+          "category": "Power Outage",
+          "distance": 0.7083980197772136,
+          "coordinates": [
+            -95.6091,
+            29.7851
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.11327484362791905,
+          "coordinates": [
+            -95.6187,
+            29.7829
+          ]
+        },
+        {
+          "category": "Storm Debris",
+          "distance": 0.11327484362791905,
+          "coordinates": [
+            -95.6187,
+            29.7829
+          ]
+        }
+      ],
+      "top_3_categories": [
+        {
+          "category": "Storm Debris",
+          "count": 14,
+          "percentage": 40
+        },
+        {
+          "category": "Power Outage",
+          "count": 8,
+          "percentage": 23
+        },
+        {
+          "category": "Other",
+          "count": 6,
+          "percentage": 17
+        }
+      ]
+    }
+  ]
+}

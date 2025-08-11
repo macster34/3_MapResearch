@@ -70,6 +70,9 @@ const MapComponent = () => {
   const [isCalculating, setIsCalculating] = useState(false);
   const [distanceLinesData, setDistanceLinesData] = useState(null);
   const [showChurches, setShowChurches] = useState(false);
+  // Live stats for animated calls to sync info cards
+  const [animatedStats, setAnimatedStats] = useState(null);
+  const [callCountsHistory, setCallCountsHistory] = useState([]);
   
   // New vulnerability animation state
   const [showVulnerabilityAnimation, setShowVulnerabilityAnimation] = useState(false);
@@ -337,24 +340,54 @@ const MapComponent = () => {
         'grass'
       ];
 
-      parkLayers.forEach(layerId => {
+      const softenLayer = (layerId) => {
         if (!map.current.getLayer(layerId)) return;
-
         try {
           const layer = map.current.getLayer(layerId);
           if (!layer) return;
-
           if (layer.type === 'fill') {
-            map.current.setPaintProperty(layerId, 'fill-color', '#3a9688');
-            map.current.setPaintProperty(layerId, 'fill-opacity', 0.4);
+            map.current.setPaintProperty(layerId, 'fill-color', '#2e3a3a');
+            map.current.setPaintProperty(layerId, 'fill-opacity', 0.08);
+          } else if (layer.type === 'line') {
+            map.current.setPaintProperty(layerId, 'line-color', '#2e3a3a');
+            map.current.setPaintProperty(layerId, 'line-opacity', 0.12);
+          } else if (layer.type === 'symbol') {
+            // Some styles expose a background-color on symbol layers
+            if (map.current.getPaintProperty(layerId, 'background-color') !== undefined) {
+              map.current.setPaintProperty(layerId, 'background-color', '#2e3a3a');
+            }
           }
-          if (layer.type === 'symbol' && map.current.getPaintProperty(layerId, 'background-color') !== undefined) {
-            map.current.setPaintProperty(layerId, 'background-color', '#3a9688');
-          }
-        } catch (error) {
-          console.warn(`Could not style park layer ${layerId}:`, error);
+        } catch (e) {
+          console.warn(`Could not soften layer ${layerId}:`, e);
         }
-      });
+      };
+
+      // First, try known layer IDs
+      parkLayers.forEach(softenLayer);
+
+      // Fallback: scan all layers for common green keywords and soften
+      try {
+        const allLayers = map.current.getStyle().layers || [];
+        const keywords = ['park', 'landuse', 'landcover', 'natural', 'grass', 'greenspace', 'pitch', 'golf', 'wood', 'forest', 'cemetery', 'meadow', 'scrub'];
+        allLayers.forEach(l => {
+          const id = l.id.toLowerCase();
+          if (keywords.some(k => id.includes(k))) softenLayer(l.id);
+          // Also target general land/background layers explicitly
+          if (l.type === 'background' || id === 'land' || id.includes('background')) {
+            try {
+              map.current.setPaintProperty(l.id, 'background-color', '#1f2429');
+              const hasOpacity = map.current.getPaintProperty(l.id, 'background-opacity');
+              if (hasOpacity !== undefined) {
+                map.current.setPaintProperty(l.id, 'background-opacity', 1);
+              }
+            } catch (e) {
+              // ignore if property not present
+            }
+          }
+        });
+      } catch (e) {
+        console.warn('Could not scan layers to soften greens:', e);
+      }
     };
 
     if (map.current) {
@@ -1375,10 +1408,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Other'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#00E600',
+                'circle-radius': 7.2,
+                'circle-color': '#93C5FD',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.5
               },
               layout: { visibility: 'visible' }
             });
@@ -1390,10 +1423,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Nuisance & Code'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#614F8A',
+                'circle-radius': 7.2,
+                'circle-color': '#60A5FA',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.5
               },
               layout: { visibility: 'visible' }
             });
@@ -1405,10 +1438,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Maintenance'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#0000B3',
+                'circle-radius': 7.2,
+                'circle-color': '#3B82F6',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.5
               },
               layout: { visibility: 'visible' }
             });
@@ -1420,10 +1453,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Traffic & Infrastructure'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#00FFFF',
+                'circle-radius': 7.2,
+                'circle-color': '#1E3A8A',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.5
               },
               layout: { visibility: 'visible' }
             });
@@ -1436,7 +1469,7 @@ const MapComponent = () => {
               filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
               paint: {
                 'circle-radius': 6,
-                'circle-color': '#FFA500',
+                'circle-color': '#FFD700',
                 'circle-stroke-width': 0,
                 'circle-opacity': 0.8
               },
@@ -1451,7 +1484,7 @@ const MapComponent = () => {
               filter: ['==', ['get', 'Category'], 'Storm Debris'],
               paint: {
                 'circle-radius': 6,
-                'circle-color': '#FFFF00',
+                'circle-color': '#FFA500',
                 'circle-stroke-width': 0,
                 'circle-opacity': 0.8
               },
@@ -1513,10 +1546,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Other'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#00E600',
+                'circle-radius': 7.2,
+                'circle-color': '#93C5FD',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.3
               },
               layout: { visibility: 'visible' }
             });
@@ -1528,10 +1561,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Nuisance & Code'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#614F8A',
+                'circle-radius': 7.2,
+                'circle-color': '#60A5FA',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.3
               },
               layout: { visibility: 'visible' }
             });
@@ -1543,10 +1576,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Maintenance'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#0000B3',
+                'circle-radius': 7.2,
+                'circle-color': '#3B82F6',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.3
               },
               layout: { visibility: 'visible' }
             });
@@ -1558,62 +1591,221 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Traffic & Infrastructure'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#00FFFF',
+                'circle-radius': 7.2,
+                'circle-color': '#1E3A8A',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.3
               },
               layout: { visibility: 'visible' }
             });
             
-            // 5. Flood & Drainage (high priority)
+            // 5. Flood & Drainage (high priority) - with smooth radial gradient glow
+            map.current.addLayer({
+              id: `${layerId}-flood-glow-3`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
+              paint: {
+                'circle-radius': 20.4,
+                'circle-color': '#FFD700',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.15
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-flood-glow-2`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
+              paint: {
+                'circle-radius': 17.0,
+                'circle-color': '#FFD700',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.25
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-flood-glow-1`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
+              paint: {
+                'circle-radius': 13.6,
+                'circle-color': '#FFD700',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.35
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-flood-glow-0`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
+              paint: {
+                'circle-radius': 10.2,
+                'circle-color': '#FFD700',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.5
+              },
+              layout: { visibility: 'visible' }
+            });
             map.current.addLayer({
               id: `${layerId}-flood`,
               type: 'circle',
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#FFA500',
+                'circle-radius': 7.56,
+                'circle-color': '#FFD700',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.6
               },
               layout: { visibility: 'visible' }
             });
             
-            // 6. Storm Debris (higher priority)
+            // 6. Storm Debris (higher priority) - with smooth radial gradient glow
+            map.current.addLayer({
+              id: `${layerId}-storm-glow-3`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Storm Debris'],
+              paint: {
+                'circle-radius': 20.4,
+                'circle-color': '#FFA500',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.15
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-storm-glow-2`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Storm Debris'],
+              paint: {
+                'circle-radius': 17.0,
+                'circle-color': '#FFA500',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.25
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-storm-glow-1`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Storm Debris'],
+              paint: {
+                'circle-radius': 13.6,
+                'circle-color': '#FFA500',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.35
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-storm-glow-0`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Storm Debris'],
+              paint: {
+                'circle-radius': 10.2,
+                'circle-color': '#FFA500',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.5
+              },
+              layout: { visibility: 'visible' }
+            });
             map.current.addLayer({
               id: `${layerId}-storm`,
               type: 'circle',
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Storm Debris'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#FFFF00',
+                'circle-radius': 7.56,
+                'circle-color': '#FFA500',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.6
               },
               layout: { visibility: 'visible' }
             });
             
-            // 7. Power Outage (highest priority - on top)
+            // 7. Power Outage (highest priority - on top) - with smooth radial gradient glow
+            map.current.addLayer({
+              id: `${layerId}-power-glow-3`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Power Outage'],
+              paint: {
+                'circle-radius': 20.4,
+                'circle-color': '#FF0000',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.15
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-power-glow-2`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Power Outage'],
+              paint: {
+                'circle-radius': 17.0,
+                'circle-color': '#FF0000',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.25
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-power-glow-1`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Power Outage'],
+              paint: {
+                'circle-radius': 13.6,
+                'circle-color': '#FF0000',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.35
+              },
+              layout: { visibility: 'visible' }
+            });
+            map.current.addLayer({
+              id: `${layerId}-power-glow-0`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Power Outage'],
+              paint: {
+                'circle-radius': 10.2,
+                'circle-color': '#FF0000',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.5
+              },
+              layout: { visibility: 'visible' }
+            });
             map.current.addLayer({
               id: `${layerId}-power`,
               type: 'circle',
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Power Outage'],
               paint: {
-                'circle-radius': 6,
+                'circle-radius': 7.56,
                 'circle-color': '#FF0000',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.6
               },
               layout: { visibility: 'visible' }
             });
           });
       } else {
         // Show all sub-layers
-        ['other', 'nuisance', 'maintenance', 'traffic', 'flood', 'storm', 'power'].forEach(suffix => {
+        ['other', 'nuisance', 'maintenance', 'traffic', 
+         'flood-glow-3', 'flood-glow-2', 'flood-glow-1', 'flood-glow-0', 'flood',
+         'storm-glow-3', 'storm-glow-2', 'storm-glow-1', 'storm-glow-0', 'storm',
+         'power-glow-3', 'power-glow-2', 'power-glow-1', 'power-glow-0', 'power'].forEach(suffix => {
           const subLayerId = `${layerId}-${suffix}`;
           if (map.current.getLayer(subLayerId)) {
             map.current.setLayoutProperty(subLayerId, 'visibility', 'visible');
@@ -1622,7 +1814,10 @@ const MapComponent = () => {
       }
     } else {
       // Hide all sub-layers
-      ['other', 'nuisance', 'maintenance', 'traffic', 'flood', 'storm', 'power'].forEach(suffix => {
+      ['other', 'nuisance', 'maintenance', 'traffic',
+       'flood-glow-3', 'flood-glow-2', 'flood-glow-1', 'flood-glow-0', 'flood',
+       'storm-glow-3', 'storm-glow-2', 'storm-glow-1', 'storm-glow-0', 'storm',
+       'power-glow-3', 'power-glow-2', 'power-glow-1', 'power-glow-0', 'power'].forEach(suffix => {
         const subLayerId = `${layerId}-${suffix}`;
         if (map.current.getLayer(subLayerId)) {
           map.current.setLayoutProperty(subLayerId, 'visibility', 'none');
@@ -1651,10 +1846,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Other'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#00E600',
+                'circle-radius': 7.2,
+                'circle-color': '#93C5FD',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.9
               },
               layout: { visibility: 'visible' }
             });
@@ -1666,10 +1861,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Nuisance & Code'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#614F8A',
+                'circle-radius': 7.2,
+                'circle-color': '#60A5FA',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.9
               },
               layout: { visibility: 'visible' }
             });
@@ -1681,10 +1876,10 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Maintenance'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#0000B3',
+                'circle-radius': 7.2,
+                'circle-color': '#3B82F6',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.9
               },
               layout: { visibility: 'visible' }
             });
@@ -1696,55 +1891,94 @@ const MapComponent = () => {
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Traffic & Infrastructure'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#00FFFF',
+                'circle-radius': 7.2,
+                'circle-color': '#1E3A8A',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 0.9
               },
               layout: { visibility: 'visible' }
             });
             
-            // 5. Flood & Drainage (high priority)
+            // 5. Flood & Drainage (high priority) - with glow
+            map.current.addLayer({
+              id: `${layerId}-flood-glow`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
+              paint: {
+                'circle-radius': 16.8,
+                'circle-color': '#FFD700',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.3
+              },
+              layout: { visibility: 'visible' }
+            });
             map.current.addLayer({
               id: `${layerId}-flood`,
               type: 'circle',
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#FFA500',
+                'circle-radius': 8.4,
+                'circle-color': '#FFD700',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 1.0
               },
               layout: { visibility: 'visible' }
             });
             
-            // 6. Storm Debris (higher priority)
+            // 6. Storm Debris (higher priority) - with glow
+            map.current.addLayer({
+              id: `${layerId}-storm-glow`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Storm Debris'],
+              paint: {
+                'circle-radius': 16.8,
+                'circle-color': '#FFA500',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.3
+              },
+              layout: { visibility: 'visible' }
+            });
             map.current.addLayer({
               id: `${layerId}-storm`,
               type: 'circle',
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Storm Debris'],
               paint: {
-                'circle-radius': 6,
-                'circle-color': '#FFFF00',
+                'circle-radius': 8.4,
+                'circle-color': '#FFA500',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 1.0
               },
               layout: { visibility: 'visible' }
             });
             
-            // 7. Power Outage (highest priority - on top)
+            // 7. Power Outage (highest priority - on top) - with glow
+            map.current.addLayer({
+              id: `${layerId}-power-glow`,
+              type: 'circle',
+              source: sourceId,
+              filter: ['==', ['get', 'Category'], 'Power Outage'],
+              paint: {
+                'circle-radius': 16.8,
+                'circle-color': '#FF0000',
+                'circle-stroke-width': 0,
+                'circle-opacity': 0.3
+              },
+              layout: { visibility: 'visible' }
+            });
             map.current.addLayer({
               id: `${layerId}-power`,
               type: 'circle',
               source: sourceId,
               filter: ['==', ['get', 'Category'], 'Power Outage'],
               paint: {
-                'circle-radius': 6,
+                'circle-radius': 8.4,
                 'circle-color': '#FF0000',
                 'circle-stroke-width': 0,
-                'circle-opacity': 0.8
+                'circle-opacity': 1.0
               },
               layout: { visibility: 'visible' }
             });
@@ -1893,12 +2127,12 @@ const MapComponent = () => {
               paint: {
                 'fill-color': '#ff0000',
                 'fill-opacity': [
-                  'interpolate', ['linear'], ['get', 'vulnerability_index'],
-                  0.0, 0.1,    // Very light red for low vulnerability
-                  0.3, 0.3,    // Light red for medium-low
-                  0.5, 0.5,    // Medium red for medium
-                  0.7, 0.7,    // Dark red for medium-high
-                  1.0, 1.0     // Full red for high vulnerability
+                  'interpolate', ['linear'], ['-', 1, ['get', 'vulnerability_index']],
+                  0.0, 1.0,
+                  0.3, 0.7,
+                  0.5, 0.5,
+                  0.7, 0.3,
+                  1.0, 0.1
                 ]
               },
               layout: { visibility: 'visible' }
@@ -1968,12 +2202,15 @@ const MapComponent = () => {
       const hasCommunityCenter = properties.has_community_center;
       const totalSquareFootage = properties.total_square_footage;
 
-      // Create vulnerability level description
+      // Create description
       let vulnerabilityLevel = '';
-      if (vulnerability < 0.3) vulnerabilityLevel = 'Low';
-      else if (vulnerability < 0.5) vulnerabilityLevel = 'Medium-Low';
-      else if (vulnerability < 0.7) vulnerabilityLevel = 'Medium';
-      else if (vulnerability < 0.8) vulnerabilityLevel = 'Medium-High';
+      const stormScore = vulnerability != null ? Number(vulnerability) : null;
+      const stormScore10 = stormScore != null ? Math.round(stormScore * 10) : null;
+      
+      if (stormScore < 0.3) vulnerabilityLevel = 'Low';
+      else if (stormScore < 0.5) vulnerabilityLevel = 'Medium-Low';
+      else if (stormScore < 0.7) vulnerabilityLevel = 'Medium';
+      else if (stormScore < 0.8) vulnerabilityLevel = 'Medium-High';
       else vulnerabilityLevel = 'High';
 
       const popupContent = `
@@ -1983,26 +2220,26 @@ const MapComponent = () => {
           </h3>
           <div style="margin-bottom: 15px;">
             <div style="display: flex; align-items: center; margin-bottom: 8px;">
-              <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff0000; opacity: ${vulnerability}; margin-right: 8px;"></div>
-              <span style="font-weight: bold; color: #f5f5f5;">
-                Vulnerability Level: ${vulnerabilityLevel}
+              <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#ff0000', opacity: vulnerability, marginRight: 8 }}></div>
+              <span style={{ fontWeight: 'bold', color: '#f5f5f5' }}>
+                Storm Score: ${stormScore10 != null ? stormScore10 : '—'} / 10
               </span>
             </div>
-            <p style="margin: 0; font-size: 14px; color: #e0e0e0;">
-              Index Score: ${(vulnerability * 100).toFixed(1)}%
+            <p style={{ margin: 0, fontSize: '14px', color: '#e0e0e0' }}>
+              (Higher = more affected by storm)
             </p>
           </div>
-          <div style="border-top: 1px solid #eee; padding-top: 10px;">
-            <p style="margin: 0 0 5px 0; font-size: 13px; color: #f5f5f5;">
+          <div style={{ borderTop: '1px solid #eee', paddingTop: 10 }}>
+            <p style={{ margin: 0, fontSize: '13px', color: '#f5f5f5' }}>
               <strong>July 311 Calls:</strong> ${calls.toLocaleString()}
             </p>
-            <p style="margin: 0 0 5px 0; font-size: 13px; color: #f5f5f5;">
+            <p style={{ margin: 0, fontSize: '13px', color: '#f5f5f5' }}>
               <strong>Median Income:</strong> $${income.toLocaleString()}
             </p>
-            <p style="margin: 0 0 5px 0; font-size: 13px; color: #f5f5f5;">
+            <p style={{ margin: 0, fontSize: '13px', color: '#f5f5f5' }}>
               <strong>Flood Coverage:</strong> ${flood.toFixed(1)}%
             </p>
-            <p style="margin: 0; font-size: 13px; color: #f5f5f5;">
+            <p style={{ margin: 0, fontSize: '13px', color: '#f5f5f5' }}>
               <strong>Community Center:</strong> ${hasCommunityCenter ? `${totalSquareFootage.toLocaleString()} sq ft` : 'None'}
             </p>
           </div>
@@ -2287,7 +2524,12 @@ const MapComponent = () => {
 
   // Animation 311 Call Markers
   useEffect(() => {
-    if (!map.current || !showVulnerabilityAnimation) return;
+    if (!map.current || !showVulnerabilityAnimation) {
+      console.log('🔍 [VULNERABILITY ANIMATION] Skipping animation - map or showVulnerabilityAnimation false');
+      return;
+    }
+
+    let cancelled = false;
 
     console.log('🔍 [VULNERABILITY ANIMATION] Starting animation with currentAnimationMonth:', currentAnimationMonth);
 
@@ -2341,9 +2583,12 @@ const MapComponent = () => {
     
     console.log('🔍 [VULNERABILITY ANIMATION] Removing existing layers...');
     existingLayers.forEach(layerId => {
+      if (cancelled || !map.current) return;
       if (map.current.getLayer(layerId)) {
-        console.log('🗑️ Removing layer:', layerId);
-        map.current.removeLayer(layerId);
+        try {
+          console.log('🗑️ Removing layer:', layerId);
+          map.current.removeLayer(layerId);
+        } catch {}
       }
     });
     
@@ -2354,9 +2599,12 @@ const MapComponent = () => {
     ];
     
     existingSources.forEach(sourceId => {
+      if (cancelled || !map.current) return;
       if (map.current.getSource(sourceId)) {
-        console.log('🗑️ Removing source:', sourceId);
-        map.current.removeSource(sourceId);
+        try {
+          console.log('🗑️ Removing source:', sourceId);
+          map.current.removeSource(sourceId);
+        } catch {}
       }
     });
 
@@ -2368,13 +2616,14 @@ const MapComponent = () => {
     };
 
     const currentFile = monthFiles[currentMonthName];
-    if (!currentFile) return;
+    if (!currentFile) return () => { cancelled = true; };
 
     console.log('🔍 [VULNERABILITY ANIMATION] Loading file:', currentFile);
 
     fetch(currentFile)
       .then(response => response.json())
       .then(data => {
+        if (cancelled || !map.current) return;
         console.log('🔍 [VULNERABILITY ANIMATION] Loaded data with', data.features.length, 'features');
         
         const sourceId = `animation-${currentMonthName.toLowerCase()}-calls`;
@@ -2386,21 +2635,16 @@ const MapComponent = () => {
         
         console.log('🔍 [VULNERABILITY ANIMATION] Filtering for date:', dateString);
         
-        // Get the Super Neighborhood boundaries for spatial filtering
-        const superNeighborhoods = [
-          { name: 'Neighborhood_50', color: '#e74c3c' },
-          { name: 'Neighborhood_3', color: '#27ae60' }
-        ];
-        
         // Load Super Neighborhood boundaries for spatial filtering
         fetch('/super-neighborhoods-vulnerability-index.geojson')
           .then(boundariesResponse => boundariesResponse.json())
           .then(boundariesData => {
+            if (cancelled || !map.current) return;
             console.log('🔍 [VULNERABILITY ANIMATION] Loaded boundaries with', boundariesData.features.length, 'features');
             
+            const TARGET_NAMES = ['LANGWOOD', 'MEMORIAL'];
             const targetBoundaries = boundariesData.features.filter(feature => 
-              feature.properties.neighborhood_name === 'Neighborhood_50' || 
-              feature.properties.neighborhood_name === 'Neighborhood_3'
+              TARGET_NAMES.includes(feature.properties.neighborhood_name)
             );
             
             console.log('🔍 [VULNERABILITY ANIMATION] Found', targetBoundaries.length, 'target boundaries');
@@ -2413,52 +2657,53 @@ const MapComponent = () => {
                 if (!callDate || !callDate.startsWith(dateString)) {
                   return false;
                 }
-                
-                // Check if call is within any of the target Super Neighborhood boundaries
                 const callPoint = feature.geometry;
                 return targetBoundaries.some(boundary => {
-                  // Simple point-in-polygon check
                   return isPointInPolygon(callPoint, boundary.geometry);
                 });
               })
             };
             
+            if (cancelled || !map.current) return;
             console.log('🔍 [VULNERABILITY ANIMATION] Filtered to', filteredData.features.length, 'features for date', dateString);
-            console.log('🔍 [VULNERABILITY ANIMATION] Total data features:', data.features.length);
-            console.log('🔍 [VULNERABILITY ANIMATION] Date string being filtered:', dateString);
-            
-            // Debug: Check a few sample dates from the data
-            const sampleDates = data.features.slice(0, 5).map(f => f.properties['Created Date Local']);
-            console.log('🔍 [VULNERABILITY ANIMATION] Sample dates from data:', sampleDates);
-            
-            // Debug: Count calls by date before spatial filtering
-            const callsByDate = {};
-            data.features.forEach(feature => {
-              const callDate = feature.properties['Created Date Local'];
-              if (callDate) {
-                const dateKey = callDate.split('T')[0];
-                callsByDate[dateKey] = (callsByDate[dateKey] || 0) + 1;
+
+            // Compute per-neighborhood counts for info cards
+            const boundary50 = targetBoundaries.find(b => b.properties.neighborhood_name === 'LANGWOOD');
+            const boundary3 = targetBoundaries.find(b => b.properties.neighborhood_name === 'MEMORIAL');
+            let count50 = 0; let count3 = 0;
+            const cat50 = {}; const cat3 = {};
+            filteredData.features.forEach(f => {
+              const p = f.geometry;
+              if (boundary50 && isPointInPolygon(p, boundary50.geometry)) count50++;
+              if (boundary3 && isPointInPolygon(p, boundary3.geometry)) count3++;
+              const cat = f.properties.Category || 'Other';
+              if (boundary50 && isPointInPolygon(p, boundary50.geometry)) {
+                cat50[cat] = (cat50[cat] || 0) + 1;
+              }
+              if (boundary3 && isPointInPolygon(p, boundary3.geometry)) {
+                cat3[cat] = (cat3[cat] || 0) + 1;
               }
             });
-            console.log('🔍 [VULNERABILITY ANIMATION] Calls by date (before spatial filtering):', callsByDate);
-            
-            // Log what categories we have
-            const categories = [...new Set(filteredData.features.map(f => f.properties.Category))];
-            console.log('🔍 [VULNERABILITY ANIMATION] Categories found:', categories);
-            
-            // Count features by category
-            const categoryCounts = {};
-            filteredData.features.forEach(feature => {
-              const category = feature.properties.Category;
-              categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+            setCallCountsHistory(prev => {
+              if (cancelled) return prev;
+              const updated = prev.slice();
+              updated[currentAnimationMonth] = count50 + count3;
+              const historySlice = updated.slice(0, currentAnimationMonth + 1)
+                .filter(val => typeof val === 'number' && !isNaN(val) && isFinite(val));
+              console.log('=== ANIMATED STATS DEBUG ===');
+              console.log('currentAnimationMonth:', currentAnimationMonth);
+              console.log('historySlice:', historySlice);
+              console.log('historySlice.length:', historySlice.length);
+              setAnimatedStats({ dateString, mostVulnerable: count50, leastVulnerable: count3, mvCategories: cat50, lvCategories: cat3, history: historySlice });
+              return updated;
             });
-            console.log('🔍 [VULNERABILITY ANIMATION] Category counts:', categoryCounts);
             
             if (filteredData.features.length === 0) {
               console.log('🔍 [VULNERABILITY ANIMATION] No features found for this date, skipping layer creation');
               return;
             }
 
+            if (cancelled || !map.current) return;
             // Add source if not present
             if (!map.current.getSource(sourceId)) {
               console.log('🔍 [VULNERABILITY ANIMATION] Adding source:', sourceId);
@@ -2468,211 +2713,164 @@ const MapComponent = () => {
               map.current.getSource(sourceId).setData(filteredData);
             }
 
+            // Helper to add a category layer safely
+            const addCategoryLayer = (suffix, filterExpr, color, opacity = 0.8, radius = 6, hasGlow = false) => {
+              if (cancelled || !map.current) return;
+              const lid = `${layerId}-${suffix}`;
+              if (map.current.getLayer(lid)) return;
+              
+              // Add smooth radial gradient glow for top 3 categories
+              if (hasGlow) {
+                // Multiple glow layers for smooth radial gradient effect
+                const glowLayers = [
+                  { radius: radius * 2.7, opacity: 0.15 },
+                  { radius: radius * 2.25, opacity: 0.25 },
+                  { radius: radius * 1.8, opacity: 0.35 },
+                  { radius: radius * 1.35, opacity: 0.5 }
+                ];
+                
+                glowLayers.forEach((glow, index) => {
+                  const glowLid = `${layerId}-${suffix}-glow-${index}`;
+                  if (!map.current.getLayer(glowLid)) {
+                    map.current.addLayer({
+                      id: glowLid,
+                      type: 'circle',
+                      source: sourceId,
+                      filter: filterExpr,
+                      paint: {
+                        'circle-radius': glow.radius,
+                        'circle-color': color,
+                        'circle-stroke-width': 0,
+                        'circle-opacity': glow.opacity
+                      },
+                      layout: { visibility: 'visible' }
+                    });
+                  }
+                });
+              }
+              
+              // Add main layer
+              map.current.addLayer({
+                id: lid,
+                type: 'circle',
+                source: sourceId,
+                filter: filterExpr,
+                paint: {
+                  'circle-radius': radius,
+                  'circle-color': color,
+                  'circle-stroke-width': 0,
+                  'circle-opacity': opacity
+                },
+                layout: { visibility: 'visible' }
+              });
+            };
+
             // Add layers in priority order (back to front)
-            // 1. Other (lowest priority)
-            console.log('🔍 [VULNERABILITY ANIMATION] Adding layer: Other (green)');
-            map.current.addLayer({
-              id: `${layerId}-other`,
-              type: 'circle',
-              source: sourceId,
-              filter: ['==', ['get', 'Category'], 'Other'],
-              paint: {
-                'circle-radius': 6,
-                'circle-color': '#00E600',
-                'circle-stroke-width': 0,
-                'circle-opacity': 0.8
-              },
-              layout: { visibility: 'visible' }
-            });
-            
-            // 2. Nuisance & Code
-            console.log('🔍 [VULNERABILITY ANIMATION] Adding layer: Nuisance & Code (purple)');
-            map.current.addLayer({
-              id: `${layerId}-nuisance`,
-              type: 'circle',
-              source: sourceId,
-              filter: ['==', ['get', 'Category'], 'Nuisance & Code'],
-              paint: {
-                'circle-radius': 6,
-                'circle-color': '#614F8A',
-                'circle-stroke-width': 0,
-                'circle-opacity': 0.8
-              },
-              layout: { visibility: 'visible' }
-            });
-            
-            // 3. Maintenance
-            console.log('🔍 [VULNERABILITY ANIMATION] Adding layer: Maintenance (blue)');
-            map.current.addLayer({
-              id: `${layerId}-maintenance`,
-              type: 'circle',
-              source: sourceId,
-              filter: ['==', ['get', 'Category'], 'Maintenance'],
-              paint: {
-                'circle-radius': 6,
-                'circle-color': '#0000B3',
-                'circle-stroke-width': 0,
-                'circle-opacity': 0.8
-              },
-              layout: { visibility: 'visible' }
-            });
-            
-            // 4. Traffic & Infrastructure
-            console.log('🔍 [VULNERABILITY ANIMATION] Adding layer: Traffic & Infrastructure (light blue)');
-            map.current.addLayer({
-              id: `${layerId}-traffic`,
-              type: 'circle',
-              source: sourceId,
-              filter: ['==', ['get', 'Category'], 'Traffic & Infrastructure'],
-              paint: {
-                'circle-radius': 6,
-                'circle-color': '#00FFFF',
-                'circle-stroke-width': 0,
-                'circle-opacity': 0.8
-              },
-              layout: { visibility: 'visible' }
-            });
-            
-            // 5. Flood & Drainage (high priority)
-            console.log('🔍 [VULNERABILITY ANIMATION] Adding layer: Flood & Drainage (orange)');
-            map.current.addLayer({
-              id: `${layerId}-flood`,
-              type: 'circle',
-              source: sourceId,
-              filter: ['==', ['get', 'Category'], 'Flood & Drainage'],
-              paint: {
-                'circle-radius': 6,
-                'circle-color': '#FFA500',
-                'circle-stroke-width': 0,
-                'circle-opacity': 0.8
-              },
-              layout: { visibility: 'visible' }
-            });
-            
-            // 6. Storm Debris (higher priority)
-            console.log('🔍 [VULNERABILITY ANIMATION] Adding layer: Storm Debris (yellow)');
-            map.current.addLayer({
-              id: `${layerId}-storm`,
-              type: 'circle',
-              source: sourceId,
-              filter: ['==', ['get', 'Category'], 'Storm Debris'],
-              paint: {
-                'circle-radius': 6,
-                'circle-color': '#FFFF00',
-                'circle-stroke-width': 0,
-                'circle-opacity': 0.8
-              },
-              layout: { visibility: 'visible' }
-            });
-            
-            // 7. Power Outage (highest priority - on top)
-            console.log('🔍 [VULNERABILITY ANIMATION] Adding layer: Power Outage (red)');
-            map.current.addLayer({
-              id: `${layerId}-power`,
-              type: 'circle',
-              source: sourceId,
-              filter: ['==', ['get', 'Category'], 'Power Outage'],
-              paint: {
-                'circle-radius': 6,
-                'circle-color': '#FF0000',
-                'circle-stroke-width': 0,
-                'circle-opacity': 0.8
-              },
-              layout: { visibility: 'visible' }
-            });
+            addCategoryLayer('other', ['==', ['get', 'Category'], 'Other'], '#93C5FD', 0.3, 7.2);
+            addCategoryLayer('nuisance', ['==', ['get', 'Category'], 'Nuisance & Code'], '#60A5FA', 0.3, 7.2);
+            addCategoryLayer('maintenance', ['==', ['get', 'Category'], 'Maintenance'], '#3B82F6', 0.3, 7.2);
+            addCategoryLayer('traffic', ['==', ['get', 'Category'], 'Traffic & Infrastructure'], '#1E3A8A', 0.3, 7.2);
+            addCategoryLayer('flood', ['==', ['get', 'Category'], 'Flood & Drainage'], '#FFD700', 0.6, 7.56, true);
+            addCategoryLayer('storm', ['==', ['get', 'Category'], 'Storm Debris'], '#FFA500', 0.6, 7.56, true);
+            addCategoryLayer('power', ['==', ['get', 'Category'], 'Power Outage'], '#FF0000', 0.6, 7.56, true);
             
             console.log('🔍 [VULNERABILITY ANIMATION] All layers added for', currentMonthName);
-            
-            logAllMapSourcesAndLayers();
           })
           .catch(error => {
+            if (cancelled) return;
             console.error(`Error loading boundaries data:`, error);
           });
       })
       .catch(error => {
+        if (cancelled) return;
         console.error(`Error loading ${currentMonthName} animation data:`, error);
       });
+
+    return () => { cancelled = true; };
   }, [showVulnerabilityAnimation, currentAnimationMonth, map]);
+
+  // Define these functions using useCallback so they are stable and accessible across effects
+  const ensurePolyLayersVisible = useCallback(() => {
+    if (!map.current) return;
+    const polyFillId = 'vulnerability-animation-polygons-fill';
+    const polyLineId = 'vulnerability-animation-polygons';
+    const polyLabelId = 'vulnerability-animation-polygons-labels';
+    try {
+      if (map.current.getLayer(polyFillId)) map.current.setLayoutProperty(polyFillId, 'visibility', 'visible');
+      if (map.current.getLayer(polyLineId)) map.current.setLayoutProperty(polyLineId, 'visibility', 'visible');
+      if (map.current.getLayer(polyLabelId)) map.current.setLayoutProperty(polyLabelId, 'visibility', 'visible');
+      // Keep polygons at bottom - don't move to top
+      // try { map.current.moveLayer(polyFillId); } catch {}
+      // try { map.current.moveLayer(polyLineId); } catch {}
+      // try { map.current.moveLayer(polyLabelId); } catch {}
+    } catch (e) {
+      console.warn('[FIXED INFRASTRUCTURE] Failed to ensure polygon layers visible:', e);
+    }
+  }, [map]);
+
+  const ensureCcChLayersVisible = useCallback(() => {
+    if (!map.current) return;
+    try {
+      if (map.current.getLayer('animation-community-centers')) map.current.setLayoutProperty('animation-community-centers', 'visibility', 'none');
+      if (map.current.getLayer('animation-churches')) map.current.setLayoutProperty('animation-churches', 'visibility', 'none');
+      try { map.current.moveLayer('animation-community-centers'); } catch {}
+      try { map.current.moveLayer('animation-churches'); } catch {}
+    } catch (e) {
+      console.warn('[FIXED INFRASTRUCTURE] Failed to ensure CC/Church layers visible:', e);
+    }
+  }, [map]);
 
   // Fixed Infrastructure for Animation (Super Neighborhood polygons, community centers, churches)
   useEffect(() => {
-    if (!map.current || !showVulnerabilityAnimation || fixedInfrastructureLoaded) return;
+    if (!map.current || !showVulnerabilityAnimation) return;
 
     console.log('🔍 [FIXED INFRASTRUCTURE] Loading fixed infrastructure for animation...');
 
-    // Load Super Neighborhood boundaries for spatial filtering
-    fetch('/super-neighborhoods-vulnerability-index.geojson')
-      .then(boundariesResponse => boundariesResponse.json())
-      .then(boundariesData => {
-        const targetBoundaries = boundariesData.features.filter(feature => 
-          feature.properties.neighborhood_name === 'Neighborhood_50' || 
-          feature.properties.neighborhood_name === 'Neighborhood_3'
-        );
+    // If polygons already exist, just ensure visibility and skip fetch
+    const polySourceId = 'vulnerability-animation-polygons';
+    const polyFillId = 'vulnerability-animation-polygons-fill';
+    const polyLineId = 'vulnerability-animation-polygons';
+    const polyLabelId = 'vulnerability-animation-polygons-labels';
 
-        // Add Super Neighborhood polygons
-        const sourceId = 'vulnerability-animation-polygons';
-        const layerId = 'vulnerability-animation-polygons';
-        
-        // Filter for only Neighborhood_50 and Neighborhood_3
-        const filteredData = {
-          type: 'FeatureCollection',
-          features: boundariesData.features.filter(feature => 
-            feature.properties.neighborhood_name === 'Neighborhood_50' || 
-            feature.properties.neighborhood_name === 'Neighborhood_3'
-          )
-        };
-
-        // Add Super Neighborhood polygons source and layers
-        if (!map.current.getSource(sourceId)) {
-          map.current.addSource(sourceId, {
-            type: 'geojson',
-            data: filteredData
-          });
-
+    try {
+      if (map.current.getSource(polySourceId)) {
+        // Ensure layers exist; if not, recreate them
+        if (!map.current.getLayer(polyFillId)) {
           map.current.addLayer({
-            id: `${layerId}-fill`,
+            id: polyFillId,
             type: 'fill',
-            source: sourceId,
+            source: polySourceId,
             paint: {
-              'fill-color': '#ff0000',
-              'fill-opacity': [
-                'interpolate', ['linear'], ['get', 'vulnerability_index'],
-                0.0, 0.1,    // Very light red for low vulnerability
-                0.3, 0.3,    // Light red for medium-low
-                0.5, 0.5,    // Medium red for medium
-                0.7, 0.7,    // Dark red for medium-high
-                1.0, 1.0     // Full red for high vulnerability
-              ]
+              'fill-color': '#FFFFFF',
+              'fill-opacity': 0.15
             },
             layout: { visibility: 'visible' }
           });
-
+        } else {
+          map.current.setLayoutProperty(polyFillId, 'visibility', 'visible');
+        }
+        if (!map.current.getLayer(polyLineId)) {
           map.current.addLayer({
-            id: layerId,
+            id: polyLineId,
             type: 'line',
-            source: sourceId,
+            source: polySourceId,
             paint: {
-              'line-color': '#333',
+              'line-color': '#FFFFFF',
               'line-width': 2,
-              'line-opacity': 0.8
+              'line-opacity': 0.6
             },
             layout: { visibility: 'visible' }
           });
-
-          // Add text labels for the Super Neighborhoods
+        } else {
+          map.current.setLayoutProperty(polyLineId, 'visibility', 'visible');
+        }
+        if (!map.current.getLayer(polyLabelId)) {
           map.current.addLayer({
-            id: `${layerId}-labels`,
+            id: polyLabelId,
             type: 'symbol',
-            source: sourceId,
+            source: polySourceId,
             layout: {
-              'text-field': [
-                'case',
-                ['==', ['get', 'neighborhood_name'], 'Neighborhood_50'],
-                'Super Neighborhood 50',
-                ['==', ['get', 'neighborhood_name'], 'Neighborhood_3'],
-                'Super Neighborhood 3',
-                ''
-              ],
+              'text-field': ['get', 'neighborhood_name'],
               'text-size': 14,
               'text-offset': [0, 0],
               'text-anchor': 'center',
@@ -2687,6 +2885,88 @@ const MapComponent = () => {
               'text-opacity': 0.9
             }
           });
+        } else {
+          map.current.setLayoutProperty(polyLabelId, 'visibility', 'visible');
+        }
+        // Move to top to ensure visibility under markers
+        try { map.current.moveLayer(polyFillId); } catch {}
+        try { map.current.moveLayer(polyLineId); } catch {}
+        try { map.current.moveLayer(polyLabelId); } catch {}
+      }
+    } catch {}
+
+    // Load Super Neighborhood boundaries for spatial filtering
+    fetch('/super-neighborhoods-vulnerability-index.geojson')
+      .then(boundariesResponse => boundariesResponse.json())
+      .then(boundariesData => {
+        // Filter for only Langwood and Memorial
+        const filteredData = {
+          type: 'FeatureCollection',
+          features: boundariesData.features.filter(feature =>
+            feature.properties.neighborhood_name === 'LANGWOOD' ||
+            feature.properties.neighborhood_name === 'MEMORIAL'
+          )
+        };
+
+        // Add Super Neighborhood polygons
+        const sourceId = 'vulnerability-animation-polygons';
+        const layerId = 'vulnerability-animation-polygons';
+
+        // Add Super Neighborhood polygons source and layers
+        if (!map.current.getSource(sourceId)) {
+          map.current.addSource(sourceId, {
+            type: 'geojson',
+            data: filteredData
+          });
+
+          map.current.addLayer({
+            id: `${layerId}-fill`,
+            type: 'fill',
+            source: sourceId,
+            paint: {
+              'fill-color': '#FFFFFF',
+              'fill-opacity': 0.15
+            },
+            layout: { visibility: 'visible' }
+          });
+
+          map.current.addLayer({
+            id: layerId,
+            type: 'line',
+            source: sourceId,
+            paint: {
+              'line-color': '#FFFFFF',
+              'line-width': 2,
+              'line-opacity': 0.6
+            },
+            layout: { visibility: 'visible' }
+          });
+
+          // Add text labels for the Super Neighborhoods
+          map.current.addLayer({
+            id: `${layerId}-labels`,
+            type: 'symbol',
+            source: sourceId,
+            layout: {
+              'text-field': ['get', 'neighborhood_name'],
+              'text-size': 14,
+              'text-offset': [0, 0],
+              'text-anchor': 'center',
+              'text-allow-overlap': true,
+              'text-ignore-placement': false,
+              'visibility': 'visible'
+            },
+            paint: {
+              'text-color': '#cccccc',
+              'text-halo-color': '#000',
+              'text-halo-width': 2,
+              'text-opacity': 0.9
+            }
+          });
+        } else {
+          // If source already exists, refresh it with the correct filtered data
+          try { map.current.getSource(sourceId).setData(filteredData); } catch {}
+          ensurePolyLayersVisible();
         }
 
         // Load and display community centers within Super Neighborhood boundaries
@@ -2699,21 +2979,23 @@ const MapComponent = () => {
               type: 'FeatureCollection',
               features: ccData.features.filter(feature => {
                 const ccPoint = feature.geometry;
-                return targetBoundaries.some(boundary => {
+                return filteredData.features.some(boundary => {
                   return isPointInPolygon(ccPoint, boundary.geometry);
                 });
               })
             };
-            
+
             console.log('🔍 [FIXED INFRASTRUCTURE] Found', filteredCC.features.length, 'community centers within Super Neighborhoods');
-            
-            // Add community centers layer
+
+            // Add/update community centers layer
+            // COMMENTED OUT - Now using memorial-markers.geojson instead
+            /*
             if (!map.current.getSource('animation-community-centers')) {
               map.current.addSource('animation-community-centers', {
                 type: 'geojson',
                 data: filteredCC
               });
-              
+
               map.current.addLayer({
                 id: 'animation-community-centers',
                 type: 'circle',
@@ -2738,16 +3020,22 @@ const MapComponent = () => {
                   'circle-stroke-width': 0,
                   'circle-opacity': 0.8
                 },
-                layout: { visibility: 'visible' }
+                layout: { visibility: 'none' }
               });
+            } else {
+              try { map.current.getSource('animation-community-centers').setData(filteredCC); } catch {}
+              ensureCcChLayersVisible();
             }
+            */
           })
           .catch(error => {
             console.error('Error loading community centers:', error);
           });
-        
+
         // Load and display churches within Super Neighborhood boundaries
         console.log('🔍 [FIXED INFRASTRUCTURE] Loading churches...');
+        // COMMENTED OUT - Now using memorial-markers.geojson instead
+        /*
         fetch('/houston_churches_with_grace.geojson')
           .then(churchResponse => churchResponse.json())
           .then(churchData => {
@@ -2756,21 +3044,21 @@ const MapComponent = () => {
               type: 'FeatureCollection',
               features: churchData.features.filter(feature => {
                 const churchPoint = feature.geometry;
-                return targetBoundaries.some(boundary => {
+                return filteredData.features.some(boundary => {
                   return isPointInPolygon(churchPoint, boundary.geometry);
                 });
               })
             };
-            
+
             console.log('🔍 [FIXED INFRASTRUCTURE] Found', filteredChurches.features.length, 'churches within Super Neighborhoods');
-            
-            // Add churches layer
+
+            // Add/update churches layer
             if (!map.current.getSource('animation-churches')) {
               map.current.addSource('animation-churches', {
                 type: 'geojson',
                 data: filteredChurches
               });
-              
+
               map.current.addLayer({
                 id: 'animation-churches',
                 type: 'circle',
@@ -2796,17 +3084,17 @@ const MapComponent = () => {
                   'circle-opacity': 0.8,
                   'circle-stroke-width': 0
                 },
-                layout: { visibility: 'visible' }
+                layout: { visibility: 'none' }
               });
+            } else {
+              try { map.current.getSource('animation-churches').setData(filteredChurches); } catch {}
+              ensureCcChLayersVisible();
             }
-            
-            // Mark fixed infrastructure as loaded
-            setFixedInfrastructureLoaded(true);
-            console.log('🔍 [FIXED INFRASTRUCTURE] Fixed infrastructure loaded successfully');
           })
           .catch(error => {
             console.error('Error loading churches:', error);
           });
+        */
       })
       .catch(error => {
         console.error('Error loading boundaries data:', error);
@@ -2814,6 +3102,7 @@ const MapComponent = () => {
 
     return () => {
       // Cleanup fixed infrastructure when animation is hidden
+    if (!map.current) return;
       if (map.current.getLayer('animation-community-centers')) {
         map.current.removeLayer('animation-community-centers');
       }
@@ -2840,49 +3129,278 @@ const MapComponent = () => {
       }
       // Reset the flag when animation stops
       setFixedInfrastructureLoaded(false);
+      try { map.current.off('styledata', styleHandler); } catch {}
     };
-  }, [showVulnerabilityAnimation, fixedInfrastructureLoaded, map]);
+  }, [showVulnerabilityAnimation, map, ensurePolyLayersVisible, ensureCcChLayersVisible]);
+
+  // Helper function to clear all animation visuals
+  const clearAllAnimationVisuals = () => {
+    if (!map.current) return;
+    
+    console.log('🧹 [ANIMATION CLEAR] Starting clear process...');
+    
+    // Immediately set animation state to false to prevent recreation
+    setShowVulnerabilityAnimation(false);
+    setFixedInfrastructureLoaded(false);
+    setCurrentAnimationMonth(-1); // Set to -1 to ensure it's different from any valid day
+    
+    // Force immediate clearing without delay to prevent race conditions
+    console.log('🧹 [ANIMATION CLEAR] Starting immediate layer removal...');
+    
+    // Explicit list of all possible animation layer names
+    const explicitAnimationLayers = [
+      // June layers
+      'animation-june-calls-other',
+      'animation-june-calls-nuisance',
+      'animation-june-calls-maintenance',
+      'animation-june-calls-traffic',
+      'animation-june-calls-flood',
+      'animation-june-calls-storm',
+      'animation-june-calls-power',
+      // July layers
+      'animation-july-calls-other',
+      'animation-july-calls-nuisance',
+      'animation-july-calls-maintenance',
+      'animation-july-calls-traffic',
+      'animation-july-calls-flood',
+      'animation-july-calls-storm',
+      'animation-july-calls-power',
+      // August layers
+      'animation-august-calls-other',
+      'animation-august-calls-nuisance',
+      'animation-august-calls-maintenance',
+      'animation-august-calls-traffic',
+      'animation-august-calls-flood',
+      'animation-august-calls-storm',
+      'animation-august-calls-power',
+      // Infrastructure layers
+      'animation-community-centers',
+      'animation-churches',
+      'vulnerability-animation-polygons',
+      'vulnerability-animation-polygons-fill',
+      'vulnerability-animation-polygons-labels'
+    ];
+    
+    const explicitAnimationSources = [
+      'animation-june-calls',
+      'animation-july-calls',
+      'animation-august-calls',
+      'animation-community-centers',
+      'animation-churches',
+      'vulnerability-animation-polygons'
+    ];
+    
+    // Remove explicit animation layers first
+    let layersRemoved = 0;
+    explicitAnimationLayers.forEach(layerId => {
+      if (map.current.getLayer(layerId)) {
+        try {
+          console.log('🗑️ Removing explicit layer:', layerId);
+          map.current.removeLayer(layerId);
+          layersRemoved++;
+          console.log('✅ Successfully removed explicit layer:', layerId);
+        } catch (error) {
+          console.error('❌ Error removing explicit layer:', layerId, error);
+        }
+      }
+    });
+    
+    // Remove explicit animation sources
+    let sourcesRemoved = 0;
+    explicitAnimationSources.forEach(sourceId => {
+      if (map.current.getSource(sourceId)) {
+        try {
+          console.log('🗑️ Removing explicit source:', sourceId);
+          map.current.removeSource(sourceId);
+          sourcesRemoved++;
+          console.log('✅ Successfully removed explicit source:', sourceId);
+        } catch (error) {
+          console.error('❌ Error removing explicit source:', sourceId, error);
+        }
+      }
+    });
+    
+    // Also do dynamic detection as backup
+    const allLayers = map.current.getStyle().layers || [];
+    const allSources = Object.keys(map.current.getStyle().sources || {});
+    
+    console.log('🔍 [ANIMATION CLEAR] Total layers found:', allLayers.length);
+    console.log('🔍 [ANIMATION CLEAR] Total sources found:', allSources.length);
+    
+    // Log all layer names for debugging
+    console.log('🔍 [ANIMATION CLEAR] All layer names:', allLayers.map(l => l.id));
+    
+    // Clear any remaining animation-related layers dynamically
+    allLayers.forEach(layer => {
+      const layerId = layer.id;
+      if ((layerId.includes('animation-') || layerId.includes('vulnerability-animation')) && 
+          !explicitAnimationLayers.includes(layerId)) {
+        console.log('🗑️ Attempting to remove dynamic layer:', layerId);
+        if (map.current.getLayer(layerId)) {
+          try {
+            map.current.removeLayer(layerId);
+            layersRemoved++;
+            console.log('✅ Successfully removed dynamic layer:', layerId);
+          } catch (error) {
+            console.error('❌ Error removing dynamic layer:', layerId, error);
+          }
+        }
+      }
+    });
+    
+    // Clear any remaining animation-related sources dynamically
+    allSources.forEach(sourceId => {
+      if ((sourceId.includes('animation-') || sourceId.includes('vulnerability-animation')) && 
+          !explicitAnimationSources.includes(sourceId)) {
+        console.log('🗑️ Attempting to remove dynamic source:', sourceId);
+        if (map.current.getSource(sourceId)) {
+          try {
+            map.current.removeSource(sourceId);
+            sourcesRemoved++;
+            console.log('✅ Successfully removed dynamic source:', sourceId);
+          } catch (error) {
+            console.error('❌ Error removing dynamic source:', sourceId, error);
+          }
+        }
+      }
+    });
+    
+    console.log(`🧹 [ANIMATION CLEAR] Summary: Removed ${layersRemoved} layers and ${sourcesRemoved} sources`);
+    console.log('🧹 [ANIMATION CLEAR] Animation state reset complete');
+    
+    // Force map refresh to ensure layers are truly gone
+    map.current.triggerRepaint();
+    
+    // Final verification - check if any animation layers remain
+    setTimeout(() => {
+      const remainingLayers = map.current.getStyle().layers.filter(layer => 
+        layer.id.includes('animation-') || layer.id.includes('vulnerability-animation')
+      );
+      const remainingSources = Object.keys(map.current.getStyle().sources).filter(sourceId => 
+        sourceId.includes('animation-') || sourceId.includes('vulnerability-animation')
+      );
+      
+      if (remainingLayers.length > 0 || remainingSources.length > 0) {
+        console.log('⚠️ [ANIMATION CLEAR] WARNING: Some animation elements remain:');
+        console.log('Remaining layers:', remainingLayers.map(l => l.id));
+        console.log('Remaining sources:', remainingSources);
+      } else {
+        console.log('✅ [ANIMATION CLEAR] All animation elements successfully removed');
+      }
+      // Reset live stats used by on-map cards
+      setAnimatedStats(null);
+      setCallCountsHistory([]);
+    }, 50);
+  };
+
+  // Re-apply neutral green styling whenever the basemap style updates
+  useEffect(() => {
+    if (!map.current) return;
+
+    const applyNeutralGreens = () => {
+      try {
+        // Known park/land layers and a scan across all layers
+        const softenLayer = (layerId) => {
+          if (!map.current.getLayer(layerId)) return;
+          try {
+            const layer = map.current.getLayer(layerId);
+            if (!layer) return;
+            if (layer.type === 'fill') {
+              map.current.setPaintProperty(layerId, 'fill-color', '#2e3a3a');
+              map.current.setPaintProperty(layerId, 'fill-opacity', 0.08);
+            } else if (layer.type === 'line') {
+              map.current.setPaintProperty(layerId, 'line-color', '#2e3a3a');
+              map.current.setPaintProperty(layerId, 'line-opacity', 0.12);
+            } else if (layer.type === 'symbol') {
+              if (map.current.getPaintProperty(layerId, 'background-color') !== undefined) {
+                map.current.setPaintProperty(layerId, 'background-color', '#2e3a3a');
+              }
+            }
+          } catch {}
+        };
+
+        const keywords = ['park', 'landuse', 'landcover', 'natural', 'grass', 'greenspace', 'pitch', 'golf', 'wood', 'forest', 'cemetery', 'meadow', 'scrub'];
+        const layers = map.current.getStyle()?.layers || [];
+        layers.forEach(l => {
+          const id = (l.id || '').toLowerCase();
+          if (keywords.some(k => id.includes(k))) softenLayer(l.id);
+          if (l.type === 'background' || id === 'land' || id.includes('background')) {
+            try {
+              map.current.setPaintProperty(l.id, 'background-color', '#1f2429');
+            } catch {}
+          }
+        });
+      } catch {}
+    };
+
+    // Apply now and on every style refresh
+    applyNeutralGreens();
+    map.current.on('styledata', applyNeutralGreens);
+    return () => {
+      if (!map.current) return;
+      map.current.off('styledata', applyNeutralGreens);
+    };
+  }, [map]);
+
+  // Define handler once per effect
+  const styleHandler = useCallback(() => {
+    if (!showVulnerabilityAnimation) return;
+    ensurePolyLayersVisible();
+    ensureCcChLayersVisible();
+  }, [showVulnerabilityAnimation, ensurePolyLayersVisible, ensureCcChLayersVisible]);
+
+  // As a fallback, re-ensure visibility whenever style data refreshes
+  useEffect(() => {
+    if (!map.current) return;
+    map.current.on('styledata', styleHandler);
+    return () => {
+      if (!map.current) return;
+      try { map.current.off('styledata', styleHandler); } catch {}
+    };
+  }, [map, styleHandler]);
 
   return (
     <MapContainer>
       <div ref={mapContainer} style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }} />
       
       {/* Vulnerability Index Gradient Legend - Fixed Visual */}
-      <div style={{
-        position: 'absolute',
-        top: 24,
-        left: 24,
-        zIndex: 1002,
-        background: 'rgba(20,20,30,0.95)',
-        color: '#fff',
-        borderRadius: 12,
-        padding: '16px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
-        minWidth: 250
-      }}>
-        <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 12, textAlign: 'center' }}>
-          Vulnerability Index
+      {showVulnerabilityIndex && (
+        <div style={{
+          position: 'absolute',
+          top: 24,
+          left: 24,
+          zIndex: 1002,
+          background: 'rgba(20,20,30,0.95)',
+          color: '#fff',
+          borderRadius: 12,
+          padding: '16px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+          minWidth: 250
+        }}>
+          <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 12, textAlign: 'center' }}>
+            Storm Score
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+            <div style={{ 
+              width: 187.5, 
+              height: 20, 
+              background: 'linear-gradient(to right, rgba(255,0,0,1.0), rgba(255,0,0,0.7), rgba(255,0,0,0.5), rgba(255,0,0,0.3), rgba(255,0,0,0.1))',
+              borderRadius: 4,
+              marginRight: 8
+            }}></div>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#fff' }}>
+            <span>Low Storm Score</span>
+            <span>High Storm Score</span>
+          </div>
+          <div style={{ marginTop: 8, fontSize: 11, color: '#aaa', textAlign: 'center' }}>
+            <div style={{ marginBottom: 4 }}>Full Red: 0–3 (Low Storm Score)</div>
+            <div style={{ marginBottom: 4 }}>Dark Red: 3–5</div>
+            <div style={{ marginBottom: 4 }}>Medium Red: 5–7</div>
+            <div style={{ marginBottom: 4 }}>Light Red: 7–10 (High Storm Score)</div>
+          </div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
-          <div style={{ 
-            width: 187.5, 
-            height: 20, 
-            background: 'linear-gradient(to right, rgba(255,0,0,0.1), rgba(255,0,0,0.3), rgba(255,0,0,0.5), rgba(255,0,0,0.7), rgba(255,0,0,1.0))',
-            borderRadius: 4,
-            marginRight: 8
-          }}></div>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#fff' }}>
-          <span>Low</span>
-          <span>High</span>
-        </div>
-        <div style={{ marginTop: 8, fontSize: 11, color: '#aaa', textAlign: 'center' }}>
-          <div style={{ marginBottom: 4 }}>Light Red: 0.0 - 0.3 (Low vulnerability)</div>
-          <div style={{ marginBottom: 4 }}>Medium Red: 0.3 - 0.5 (Medium-Low)</div>
-          <div style={{ marginBottom: 4 }}>Dark Red: 0.5 - 0.7 (Medium)</div>
-          <div style={{ marginBottom: 4 }}>Full Red: 0.7 - 1.0 (High vulnerability)</div>
-        </div>
-      </div>
+      )}
       
       <PopupManager map={map} />
       <ErcotManager ref={ercotManagerRef} map={map} isErcotMode={isErcotMode} setIsErcotMode={setIsErcotMode} />
@@ -3010,57 +3528,6 @@ const MapComponent = () => {
         </div>
       )}
 
-      {/* 311 Calls Color Legend - Fixed Visual */}
-      <div style={{
-        position: 'fixed',
-        left: 24,
-        bottom: 24,
-        zIndex: 1002,
-        background: 'rgba(20,20,30,0.95)',
-        color: '#fff',
-        borderRadius: 12,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
-        padding: '16px 20px',
-        minWidth: 280,
-        maxWidth: 320,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        gap: 8
-      }}>
-        <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 8, textAlign: 'center', width: '100%' }}>
-          311 Calls Categories
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12 }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#FF0000' }}></div>
-          <span>Power Outage</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12 }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#FFFF00' }}></div>
-          <span>Storm Debris</span>
-      </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12 }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#FFA500' }}></div>
-          <span>Flood & Drainage</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12 }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#00FFFF' }}></div>
-          <span>Traffic & Infrastructure</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12 }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#0000B3' }}></div>
-          <span>Maintenance</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12 }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#614F8A' }}></div>
-          <span>Nuisance & Code</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12 }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#00E600' }}></div>
-          <span>Other</span>
-        </div>
-      </div>
-
       {/* Vulnerability Animation */}
       <VulnerabilityAnimation
         map={map.current}
@@ -3073,6 +3540,8 @@ const MapComponent = () => {
             setShowVulnerabilityAnimation(false);
           }
         }}
+        onAnimationReset={clearAllAnimationVisuals}
+        animatedStats={animatedStats}
         currentDay={currentAnimationMonth}
       />
     </MapContainer>

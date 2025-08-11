@@ -1,6 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 import { DC_BOUNDS } from './constants';
-import { analyzeCensusData } from './hooks/useCensusData';
+// import { analyzeCensusData } from './hooks/useCensusData';
 import { AINavigator } from './hooks/useAINavigator';
 import { askClaude } from '../../services/claude';
 import { 
@@ -186,12 +186,12 @@ export const initializeAIAnalysis = async (map, onUpdate) => {
   console.log('Initializing AI analysis...');
   
   try {
-    const censusData = await analyzeCensusData();
-    console.log('Census data loaded:', censusData ? 'yes' : 'no');
+    // Census integration is optional; skip if not available
+    // const censusData = await analyzeCensusData();
+    // console.log('Census data loaded:', censusData ? 'yes' : 'no');
     
     const navigator = new AINavigator({
       map: map,
-      censusData,
       onUpdate: (newSource) => {
         console.log('Updating map source...');
         if (map.getSource('buildings')) {

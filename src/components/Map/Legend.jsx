@@ -44,11 +44,11 @@ const SwatchCircle = styled.div`
 
 const VulnerabilityLegend = ({ slideUp, position }) => (
   <LegendContainer slideUp={slideUp} position={position}>
-    <div style={{ fontWeight: 600, marginBottom: 8 }}>Community Center Vulnerability</div>
-    <VulnerabilitySwatch><SwatchCircle opacity={0.1} />Least vulnerable</VulnerabilitySwatch>
-    <VulnerabilitySwatch><SwatchCircle opacity={0.4} />Low-moderate</VulnerabilitySwatch>
-    <VulnerabilitySwatch><SwatchCircle opacity={0.7} />Moderate-high</VulnerabilitySwatch>
-    <VulnerabilitySwatch opacity={1.0}><SwatchCircle opacity={1.0} />Most vulnerable</VulnerabilitySwatch>
+    <div style={{ fontWeight: 600, marginBottom: 8 }}>Storm Score (Impact)</div>
+    <VulnerabilitySwatch><SwatchCircle opacity={0.1} />Low impact</VulnerabilitySwatch>
+    <VulnerabilitySwatch><SwatchCircle opacity={0.4} />Low-moderate impact</VulnerabilitySwatch>
+    <VulnerabilitySwatch><SwatchCircle opacity={0.7} />Moderate-high impact</VulnerabilitySwatch>
+    <VulnerabilitySwatch opacity={1.0}><SwatchCircle opacity={1.0} />High impact</VulnerabilitySwatch>
   </LegendContainer>
 );
 

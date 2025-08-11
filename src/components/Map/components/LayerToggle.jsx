@@ -358,7 +358,7 @@ const LayerToggle = ({
         onClick={() => setShowVulnerabilityIndex(!showVulnerabilityIndex)}
         style={{ height: '32px', padding: '0 12px', fontSize: '14px', marginBottom: '8px', background: showVulnerabilityIndex ? '#FF4500' : '#666' }}
       >
-        Vulnerability Index
+        Storm Score
       </ToggleButton>
 
       <ToggleButton 
@@ -388,7 +388,7 @@ const LayerToggle = ({
       <ToggleButton 
         $active={showAugust311Calls}
         onClick={() => setShowAugust311Calls(!showAugust311Calls)}
-        style={{ height: '32px', padding: '0 12px', fontSize: '14px', marginBottom: '8px', background: showAugust311Calls ? '#FF6B35' : '#666' }}
+        style={{ height: '32px', padding: '0 12px', fontSize: '14px', marginBottom: '8px', background: showAugust311Calls ? '#FF0000' : '#666' }}
       >
         August 311 Calls
       </ToggleButton>
@@ -396,7 +396,7 @@ const LayerToggle = ({
       <ToggleButton 
         $active={showJune311Calls}
         onClick={() => setShowJune311Calls(!showJune311Calls)}
-        style={{ height: '32px', padding: '0 12px', fontSize: '14px', marginBottom: '8px', background: showJune311Calls ? '#32CD32' : '#666' }}
+        style={{ height: '32px', padding: '0 12px', fontSize: '14px', marginBottom: '8px', background: showJune311Calls ? '#FF8C00' : '#666' }}
       >
         June 311 Calls
       </ToggleButton>
@@ -404,7 +404,7 @@ const LayerToggle = ({
       <ToggleButton 
         $active={showJuly311Calls}
         onClick={() => setShowJuly311Calls(!showJuly311Calls)}
-        style={{ height: '32px', padding: '0 12px', fontSize: '14px', marginBottom: '8px', background: showJuly311Calls ? '#FF1493' : '#666' }}
+        style={{ height: '32px', padding: '0 12px', fontSize: '14px', marginBottom: '8px', background: showJuly311Calls ? '#FF0000' : '#666' }}
       >
         July 311 Calls
       </ToggleButton>

@@ -1,0 +1,125 @@
+{
+  "calculation_date": "2025-08-11T00:56:21.293Z",
+  "date_range": {
+    "start": "2024-07-08",
+    "end": "2024-07-31"
+  },
+  "total_311_calls_in_period": 48611,
+  "markers_analyzed": 6,
+  "results": [
+    {
+      "marker_name": "Christ Memorial Lutheran Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.59428303999998,
+        29.770484579999998
+      ],
+      "total_calls": 346,
+      "call_breakdown": {
+        "Storm Debris": 245,
+        "Traffic & Infrastructure": 26,
+        "Other": 4,
+        "Flood & Drainage": 34,
+        "Nuisance & Code": 2,
+        "Maintenance": 16,
+        "Power Outage": 19
+      },
+      "calls_within_1mile": 346
+    },
+    {
+      "marker_name": "Memorial Drive United Methodist Chruch",
+      "marker_type": "church",
+      "coordinates": [
+        -95.56741506666665,
+        29.771985555555553
+      ],
+      "total_calls": 284,
+      "call_breakdown": {
+        "Storm Debris": 151,
+        "Nuisance & Code": 4,
+        "Power Outage": 35,
+        "Other": 6,
+        "Maintenance": 51,
+        "Flood & Drainage": 23,
+        "Traffic & Infrastructure": 14
+      },
+      "calls_within_1mile": 284
+    },
+    {
+      "marker_name": "Saint John Vianney Catholic Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.61435343846155,
+        29.76994747307692
+      ],
+      "total_calls": 236,
+      "call_breakdown": {
+        "Nuisance & Code": 8,
+        "Traffic & Infrastructure": 24,
+        "Other": 10,
+        "Storm Debris": 156,
+        "Maintenance": 3,
+        "Flood & Drainage": 20,
+        "Power Outage": 15
+      },
+      "calls_within_1mile": 236
+    },
+    {
+      "marker_name": "Kendall Community Center",
+      "marker_type": "community-center",
+      "coordinates": [
+        -95.62058533042223,
+        29.772927358605735
+      ],
+      "total_calls": 215,
+      "call_breakdown": {
+        "Power Outage": 12,
+        "Nuisance & Code": 4,
+        "Storm Debris": 133,
+        "Other": 13,
+        "Traffic & Infrastructure": 20,
+        "Maintenance": 4,
+        "Flood & Drainage": 29
+      },
+      "calls_within_1mile": 215
+    },
+    {
+      "marker_name": "Emmanuel Episcopal Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.61759711481481,
+        29.776190977777784
+      ],
+      "total_calls": 173,
+      "call_breakdown": {
+        "Power Outage": 14,
+        "Nuisance & Code": 5,
+        "Storm Debris": 96,
+        "Other": 11,
+        "Traffic & Infrastructure": 19,
+        "Maintenance": 4,
+        "Flood & Drainage": 24
+      },
+      "calls_within_1mile": 173
+    },
+    {
+      "marker_name": "Bridgepoint Bible Church",
+      "marker_type": "church",
+      "coordinates": [
+        -95.62048355714285,
+        29.782360052380948
+      ],
+      "total_calls": 122,
+      "call_breakdown": {
+        "Power Outage": 10,
+        "Nuisance & Code": 3,
+        "Storm Debris": 63,
+        "Other": 10,
+        "Traffic & Infrastructure": 14,
+        "Flood & Drainage": 21,
+        "Maintenance": 1
+      },
+      "calls_within_1mile": 122
+    }
+  ]
+}
