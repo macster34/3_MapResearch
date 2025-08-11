@@ -2534,21 +2534,25 @@ const MapComponent = () => {
     console.log('🔍 [VULNERABILITY ANIMATION] Starting animation with currentAnimationMonth:', currentAnimationMonth);
 
     // Calculate which month and day we're currently on
-    const totalDays = 30 + 31 + 31; // June + July + August
+    // Updated to account for June starting from day 15
+    const juneDays = 16; // June 15-30 = 16 days
+    const julyDays = 31; // July 1-31 = 31 days
+    const augustDays = 31; // August 1-31 = 31 days
+    const totalDays = juneDays + julyDays + augustDays; // 78 days total
     const currentDayIndex = currentAnimationMonth;
     
     let currentMonth = 0; // 0 = June, 1 = July, 2 = August
-    let dayInMonth = currentDayIndex + 1;
+    let dayInMonth = currentDayIndex + 15; // June starts from day 15
     
-    if (currentDayIndex >= 30 + 31) {
+    if (currentDayIndex >= juneDays + julyDays) {
       currentMonth = 2; // August
-      dayInMonth = currentDayIndex - 30 - 31 + 1;
-    } else if (currentDayIndex >= 30) {
+      dayInMonth = currentDayIndex - juneDays - julyDays + 1;
+    } else if (currentDayIndex >= juneDays) {
       currentMonth = 1; // July
-      dayInMonth = currentDayIndex - 30 + 1;
+      dayInMonth = currentDayIndex - juneDays + 1;
     } else {
       currentMonth = 0; // June
-      dayInMonth = currentDayIndex + 1;
+      dayInMonth = currentDayIndex + 15; // June starts from day 15
     }
     
     const months = ['June', 'July', 'August'];
@@ -2842,7 +2846,7 @@ const MapComponent = () => {
             source: polySourceId,
             paint: {
               'fill-color': '#FFFFFF',
-              'fill-opacity': 0.15
+              'fill-opacity': 0
             },
             layout: { visibility: 'visible' }
           });
@@ -2856,7 +2860,7 @@ const MapComponent = () => {
             source: polySourceId,
             paint: {
               'line-color': '#FFFFFF',
-              'line-width': 2,
+              'line-width': 4,
               'line-opacity': 0.6
             },
             layout: { visibility: 'visible' }
@@ -2925,7 +2929,7 @@ const MapComponent = () => {
             source: sourceId,
             paint: {
               'fill-color': '#FFFFFF',
-              'fill-opacity': 0.15
+              'fill-opacity': 0
             },
             layout: { visibility: 'visible' }
           });
@@ -2936,7 +2940,7 @@ const MapComponent = () => {
             source: sourceId,
             paint: {
               'line-color': '#FFFFFF',
-              'line-width': 2,
+              'line-width': 4,
               'line-opacity': 0.6
             },
             layout: { visibility: 'visible' }
